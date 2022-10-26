@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-09-30T18:24:06.395Z",
+    "end": "2022-09-30T18:25:36.701Z",
+    "duration": 90306,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1a8b2a8e-2f80-411e-a2b5-c49c63a26b7c",
+      "title": "",
+      "fullFile": "cypress/integration/CreateAndDeleteImageAPI.feature",
+      "file": "cypress/integration/CreateAndDeleteImageAPI.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4da050d0-86c0-4ed0-a08f-9b4a6372ed7c",
+          "title": "Create And Delete Image API",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create an Image API Test",
+              "fullTitle": "Create And Delete Image API Create an Image API Test",
+              "timedOut": null,
+              "duration": 28758,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "1c512d75-8d40-450a-a9a9-611d8e35c6be",
+              "parentUUID": "4da050d0-86c0-4ed0-a08f-9b4a6372ed7c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Delete created Image",
+              "fullTitle": "Create And Delete Image API Delete created Image",
+              "timedOut": null,
+              "duration": 16377,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {
+                "message": "CypressError: `cy.request()` failed on:\n\nhttps://www.chick-fil-astage.com/location-api/photos\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: https://www.chick-fil-astage.com/location-api/photos\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"Authorization\": \"Bearer eyJraWQiOiJDSDEzMzF6bHJCV244cjdNY2V6Ykk4NS14SXNSeWFlZUdoNy1qd21wNzRvIiwiYWxnIjoiUlMyNTYifQ.eyJ2ZXIiOjEsImp0aSI6IkFULjRJbUJ5a0FnN2stdWFMV2RncnpQNlZLXzAtTURPVWw1RXlZOVRoOUJxb0EiLCJpc3MiOiJodHRwczovL2NmYWhvbWUub2t0YXByZXZpZXcuY29tL29hdXRoMi9hdXNjanNha3ozUGFBUDgySzBoNyIsImF1ZCI6IlRlc3QgSW50ZXJuYWwgQ2xpZW50cyIsImlhdCI6MTY2NDU2MjI2NSwiZXhwIjoxNjY0NTY1ODY1LCJjaWQiOiIwb2FjOHliN3ZoS2JLaE41MTBoNyIsInVpZCI6IjAwdTE3MXhzZWIwQkNXVjE4MGg4Iiwic2NwIjpbImVtYWlsIiwib3BlbmlkIl0sImF1dGhfdGltZSI6MTY2NDU2MjI2NCwiY2ZhLWdyb3VwcyI6WyJTUF9DT05GSUctTE9HSU4iXSwic3ViIjoibmFyYXNpbWhhLmFsaWRlbmExIiwiY2ZhX3Blcm1zIjp7IlNQX0NPTkZJRyI6eyJET1BfQURNSU4iOlsiMDAwMDAiXSwiRE9QX1VTRVIiOlsiMDAwMDAiXSwiTE9HSU4iOlsiMDAwMDAiXX19LCJjZmFfbG9jX2xpc3QiOlsiMDAwMDAiXSwiY2ZhX2F1ZCI6IkNPTlRSQUNUT1JfQVVESUVOQ0UiLCJuaWNrbmFtZSI6Ik5hcmFzaW1oYSIsImNmYV9ndWlkIjoiZDg3ZGEyYzIxNzFkODBlNWI0NDIyNzhlMDc5OThjMWUiLCJjZmEtYXBwLXRhZyI6IlNQX0NPTkZJRyIsImZhbWlseV9uYW1lIjoiQWxpZGVuYSIsImVtYWlsIjoibmFyYXNpbWhhLmFsaWRlbmExQGFjY2Vzc2NmYS5jb20ifQ.KENjhGN4NWTOESwBS-GRiaVMQP3RUu452ix7FRmtGo_ulvT2_t-PWJ_EPL5RcYLTN8nr8eYFIQWXycK9lQI3h8tQeEz64J_Ybdj6b8zudeM6OyeRbhupPmr04G-CIaZNl82pvy8UpXxZ83qwMSlVYOC_Xjd6BQyEFtxbqObGkbenOPLzr85RHXb1K_bOWP_KguOe9R2ulDdK1Vp1l_7TvZIqLrA883vHOiw53AH3XemPy--9ldlHUZyX1OMFZ507_ktwDY7GlaBVwPsNKGCNOlzzvUN-61ppizXcCAh4JhAi_rNWX207VaCXWbugO9jd_jjVB7RZYaj4lOs5LgoPKQ\",\n  \"user-agent\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/9.7.0 Chrome/100.0.4896.75 Electron/18.0.4 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"cookie\": \"ASP.NET_SessionId=nsba4bzt3pqaecxwsg3ddarh; cfacom#lang=en\",\n  \"accept-encoding\": \"gzip, deflate\",\n  \"content-type\": \"application/json\",\n  \"content-length\": 62\n}\nBody: {\"filename\":\"image-upload-api-for-dop/location-3700/test.png\"}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 404 - Not Found\nHeaders: {\n  \"date\": \"Fri, 30 Sep 2022 18:25:34 GMT\",\n  \"content-type\": \"text/html; charset=utf-8\",\n  \"transfer-encoding\": \"chunked\",\n  \"connection\": \"keep-alive\",\n  \"cache-control\": \"private\",\n  \"server\": \"REDACTED\",\n  \"strict-transport-security\": \"max-age=31536000\",\n  \"content-security-policy\": \"frame-ancestors 'self' https://kelton.decipherinc.com https://*.cfahome.com\",\n  \"x-content-type-options\": \"nosniff\",\n  \"x-xss-protection\": \"1\"\n}\nBody: \r\n\r\n<!DOCTYPE html>\r\n<!--[if gt IE 9]><!-->\r\n<html lang=\"en\">\r\n<!--<![endif]-->\r\n<head>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n<meta charset=\"utf-8\">\r\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n<meta name=\"keywords\" content=\"\">\r\n<meta name=\"description\" content=\"Sorry that page was not found. Please try again or use our convenient search box.\">\r\n\r\n<meta name=\"robots\" content=\"noindex\" />\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, user-scalable=yes\" />\r\n<meta name=\"server\" content=\"S9STAGECD2-31MA\" />\r\n<meta name=\"serverzone\" content=\"0.0\" />\r\n<meta name=\"site\" content=\"CFACOM\" />\r\n<meta name='bsk' content='80dd234943647559a245be654346b81f'/>\r\n<meta name='bskv' content='2.1.2310-stageb'/>\r\n\t<link rel=\"canonical\" href=\"https://www.chick-fil-astage.com/404\" />\r\n\r\n<link rel=\"shortcut icon\" href=\"/Assets/Theming/favicon.ico\" type=\"image/x-icon\">\r\n\r\n<title>404 | Page Not Found | Chick-fil-A</title>\r\n\r\n\t\t<link href=\"https://d2wl1kt18tqdum.cloudfront.net/v2.1.2310-stageb/Assets/Theming/css/cfacom.css\" rel=\"stylesheet\" type=\"text/css\" />\r\n\r\n\t\r\n\r\n\r\n<!-- OneTrust Cookies Consent Notice start -->\r\n<script src=\"https://cdn.cookielaw.org/scripttemplates/otSDKStub.js\"  type=\"text/javascript\" charset=\"UTF-8\" data-domain-script=\"4eeb7bf7-e1e9-49fc-84fa-3395630bec87-test\"></script>\r\n<script type=\"text/javascript\">\r\nfunction OptanonWrapper() { }\r\n</script>\r\n<!-- OneTrust Cookies Consent Notice end -->\r\n\r\n<!--Google Optimize Snippet start -->\r\n<script type=\"text/plain\" class=\"optanon-category-2\" src=\"https://www.googleoptimize.com/optimize.js?id=OPT-TXZMM4N\"></script>\r\n<!--Google Optimize Snippet end -->\r\n\r\n\t<!-- Google Tag Manager -->\r\n\t<script>\r\n\t\t(function (w, d, s, l, i) {\r\n\t\t\tw[l] = w[l] || [];\r\n\t\t\tw[l].push({\r\n\t\t\t\t'gtm.start' :\r\n\t\t\t\t\tnew Date().getTime(),\r\n\t\t\t\tevent : 'gtm.js'\r\n\t\t\t});\r\n\t\t\tvar f = d.getElementsByTagName(s)[0],\r\n\t\t\t\tj = d.createElement(s),\r\n\t\t\t\tdl = l != 'dataLayer' ? '&l=' + l : '';\r\n\t\t\tj.async = true;\r\n\t\t\tj.src =\r\n\t\t\t\t'//www.googletagmanager.co...\n\n\nhttps://on.cypress.io/request",
+                "estack": "CypressError: `cy.request()` failed on:\n\nhttps://www.chick-fil-astage.com/location-api/photos\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: https://www.chick-fil-astage.com/location-api/photos\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"Authorization\": \"Bearer eyJraWQiOiJDSDEzMzF6bHJCV244cjdNY2V6Ykk4NS14SXNSeWFlZUdoNy1qd21wNzRvIiwiYWxnIjoiUlMyNTYifQ.eyJ2ZXIiOjEsImp0aSI6IkFULjRJbUJ5a0FnN2stdWFMV2RncnpQNlZLXzAtTURPVWw1RXlZOVRoOUJxb0EiLCJpc3MiOiJodHRwczovL2NmYWhvbWUub2t0YXByZXZpZXcuY29tL29hdXRoMi9hdXNjanNha3ozUGFBUDgySzBoNyIsImF1ZCI6IlRlc3QgSW50ZXJuYWwgQ2xpZW50cyIsImlhdCI6MTY2NDU2MjI2NSwiZXhwIjoxNjY0NTY1ODY1LCJjaWQiOiIwb2FjOHliN3ZoS2JLaE41MTBoNyIsInVpZCI6IjAwdTE3MXhzZWIwQkNXVjE4MGg4Iiwic2NwIjpbImVtYWlsIiwib3BlbmlkIl0sImF1dGhfdGltZSI6MTY2NDU2MjI2NCwiY2ZhLWdyb3VwcyI6WyJTUF9DT05GSUctTE9HSU4iXSwic3ViIjoibmFyYXNpbWhhLmFsaWRlbmExIiwiY2ZhX3Blcm1zIjp7IlNQX0NPTkZJRyI6eyJET1BfQURNSU4iOlsiMDAwMDAiXSwiRE9QX1VTRVIiOlsiMDAwMDAiXSwiTE9HSU4iOlsiMDAwMDAiXX19LCJjZmFfbG9jX2xpc3QiOlsiMDAwMDAiXSwiY2ZhX2F1ZCI6IkNPTlRSQUNUT1JfQVVESUVOQ0UiLCJuaWNrbmFtZSI6Ik5hcmFzaW1oYSIsImNmYV9ndWlkIjoiZDg3ZGEyYzIxNzFkODBlNWI0NDIyNzhlMDc5OThjMWUiLCJjZmEtYXBwLXRhZyI6IlNQX0NPTkZJRyIsImZhbWlseV9uYW1lIjoiQWxpZGVuYSIsImVtYWlsIjoibmFyYXNpbWhhLmFsaWRlbmExQGFjY2Vzc2NmYS5jb20ifQ.KENjhGN4NWTOESwBS-GRiaVMQP3RUu452ix7FRmtGo_ulvT2_t-PWJ_EPL5RcYLTN8nr8eYFIQWXycK9lQI3h8tQeEz64J_Ybdj6b8zudeM6OyeRbhupPmr04G-CIaZNl82pvy8UpXxZ83qwMSlVYOC_Xjd6BQyEFtxbqObGkbenOPLzr85RHXb1K_bOWP_KguOe9R2ulDdK1Vp1l_7TvZIqLrA883vHOiw53AH3XemPy--9ldlHUZyX1OMFZ507_ktwDY7GlaBVwPsNKGCNOlzzvUN-61ppizXcCAh4JhAi_rNWX207VaCXWbugO9jd_jjVB7RZYaj4lOs5LgoPKQ\",\n  \"user-agent\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/9.7.0 Chrome/100.0.4896.75 Electron/18.0.4 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"cookie\": \"ASP.NET_SessionId=nsba4bzt3pqaecxwsg3ddarh; cfacom#lang=en\",\n  \"accept-encoding\": \"gzip, deflate\",\n  \"content-type\": \"application/json\",\n  \"content-length\": 62\n}\nBody: {\"filename\":\"image-upload-api-for-dop/location-3700/test.png\"}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 404 - Not Found\nHeaders: {\n  \"date\": \"Fri, 30 Sep 2022 18:25:34 GMT\",\n  \"content-type\": \"text/html; charset=utf-8\",\n  \"transfer-encoding\": \"chunked\",\n  \"connection\": \"keep-alive\",\n  \"cache-control\": \"private\",\n  \"server\": \"REDACTED\",\n  \"strict-transport-security\": \"max-age=31536000\",\n  \"content-security-policy\": \"frame-ancestors 'self' https://kelton.decipherinc.com https://*.cfahome.com\",\n  \"x-content-type-options\": \"nosniff\",\n  \"x-xss-protection\": \"1\"\n}\nBody: \r\n\r\n<!DOCTYPE html>\r\n<!--[if gt IE 9]><!-->\r\n<html lang=\"en\">\r\n<!--<![endif]-->\r\n<head>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n<meta charset=\"utf-8\">\r\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n<meta name=\"keywords\" content=\"\">\r\n<meta name=\"description\" content=\"Sorry that page was not found. Please try again or use our convenient search box.\">\r\n\r\n<meta name=\"robots\" content=\"noindex\" />\r\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, user-scalable=yes\" />\r\n<meta name=\"server\" content=\"S9STAGECD2-31MA\" />\r\n<meta name=\"serverzone\" content=\"0.0\" />\r\n<meta name=\"site\" content=\"CFACOM\" />\r\n<meta name='bsk' content='80dd234943647559a245be654346b81f'/>\r\n<meta name='bskv' content='2.1.2310-stageb'/>\r\n\t<link rel=\"canonical\" href=\"https://www.chick-fil-astage.com/404\" />\r\n\r\n<link rel=\"shortcut icon\" href=\"/Assets/Theming/favicon.ico\" type=\"image/x-icon\">\r\n\r\n<title>404 | Page Not Found | Chick-fil-A</title>\r\n\r\n\t\t<link href=\"https://d2wl1kt18tqdum.cloudfront.net/v2.1.2310-stageb/Assets/Theming/css/cfacom.css\" rel=\"stylesheet\" type=\"text/css\" />\r\n\r\n\t\r\n\r\n\r\n<!-- OneTrust Cookies Consent Notice start -->\r\n<script src=\"https://cdn.cookielaw.org/scripttemplates/otSDKStub.js\"  type=\"text/javascript\" charset=\"UTF-8\" data-domain-script=\"4eeb7bf7-e1e9-49fc-84fa-3395630bec87-test\"></script>\r\n<script type=\"text/javascript\">\r\nfunction OptanonWrapper() { }\r\n</script>\r\n<!-- OneTrust Cookies Consent Notice end -->\r\n\r\n<!--Google Optimize Snippet start -->\r\n<script type=\"text/plain\" class=\"optanon-category-2\" src=\"https://www.googleoptimize.com/optimize.js?id=OPT-TXZMM4N\"></script>\r\n<!--Google Optimize Snippet end -->\r\n\r\n\t<!-- Google Tag Manager -->\r\n\t<script>\r\n\t\t(function (w, d, s, l, i) {\r\n\t\t\tw[l] = w[l] || [];\r\n\t\t\tw[l].push({\r\n\t\t\t\t'gtm.start' :\r\n\t\t\t\t\tnew Date().getTime(),\r\n\t\t\t\tevent : 'gtm.js'\r\n\t\t\t});\r\n\t\t\tvar f = d.getElementsByTagName(s)[0],\r\n\t\t\t\tj = d.createElement(s),\r\n\t\t\t\tdl = l != 'dataLayer' ? '&l=' + l : '';\r\n\t\t\tj.async = true;\r\n\t\t\tj.src =\r\n\t\t\t\t'//www.googletagmanager.co...\n\n\nhttps://on.cypress.io/request\n    at https://test-ctrl.cfahome.com/__cypress/runner/cypress_runner.js:165434:80\n    at tryCatcher (https://test-ctrl.cfahome.com/__cypress/runner/cypress_runner.js:13022:23)\n    at Promise._settlePromiseFromHandler (https://test-ctrl.cfahome.com/__cypress/runner/cypress_runner.js:10957:31)\n    at Promise._settlePromise (https://test-ctrl.cfahome.com/__cypress/runner/cypress_runner.js:11014:18)\n    at Promise._settlePromise0 (https://test-ctrl.cfahome.com/__cypress/runner/cypress_runner.js:11059:10)\n    at Promise._settlePromises (https://test-ctrl.cfahome.com/__cypress/runner/cypress_runner.js:11139:18)\n    at _drainQueueStep (https://test-ctrl.cfahome.com/__cypress/runner/cypress_runner.js:7729:12)\n    at _drainQueue (https://test-ctrl.cfahome.com/__cypress/runner/cypress_runner.js:7722:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://test-ctrl.cfahome.com/__cypress/runner/cypress_runner.js:7738:5)\n    at Async.drainQueues (https://test-ctrl.cfahome.com/__cypress/runner/cypress_runner.js:7608:14)\nFrom Your Spec Code:\n    at Context.eval (https://test-ctrl.cfahome.com/__cypress/tests?p=cypress/integration/CreateAndDeleteImageAPI.feature:68:9)",
+                "diff": null
+              },
+              "uuid": "3cd22653-a880-4bee-bd5f-a523ed11f7a9",
+              "parentUUID": "4da050d0-86c0-4ed0-a08f-9b4a6372ed7c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1c512d75-8d40-450a-a9a9-611d8e35c6be"
+          ],
+          "failures": [
+            "3cd22653-a880-4bee-bd5f-a523ed11f7a9"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 45135,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

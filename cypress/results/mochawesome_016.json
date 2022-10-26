@@ -1,0 +1,181 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-09-30T19:36:16.493Z",
+    "end": "2022-09-30T19:37:40.705Z",
+    "duration": 84212,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6c44a172-703d-460f-8aca-61a5d5837f04",
+      "title": "",
+      "fullFile": "cypress/integration/LocalMenu.feature",
+      "file": "cypress/integration/LocalMenu.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4b4d6123-b900-406d-8fef-58ee4af458c2",
+          "title": "Local Menu",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "selecting orderpickup on Locations Item details page navigates to PWO",
+              "fullTitle": "Local Menu selecting orderpickup on Locations Item details page navigates to PWO",
+              "timedOut": null,
+              "duration": 10251,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "f88914c3-dd19-4edc-9b9c-de3e59e13df6",
+              "parentUUID": "4b4d6123-b900-406d-8fef-58ee4af458c2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "selecting Delivery on Locations Item details page navigates to PWO",
+              "fullTitle": "Local Menu selecting Delivery on Locations Item details page navigates to PWO",
+              "timedOut": null,
+              "duration": 6638,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "dfda3623-65b1-4110-b289-b69b35dbf88d",
+              "parentUUID": "4b4d6123-b900-406d-8fef-58ee4af458c2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "selecting orderpickup navigates to PWO",
+              "fullTitle": "Local Menu selecting orderpickup navigates to PWO",
+              "timedOut": null,
+              "duration": 6302,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "d706dc83-7f5e-4898-be06-1ed627f8ace2",
+              "parentUUID": "4b4d6123-b900-406d-8fef-58ee4af458c2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "selecting order Delivery navigates to Delivery",
+              "fullTitle": "Local Menu selecting order Delivery navigates to Delivery",
+              "timedOut": null,
+              "duration": 7717,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "dde7a199-9665-42cb-8cab-8f273eb393c8",
+              "parentUUID": "4b4d6123-b900-406d-8fef-58ee4af458c2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Clicking on sub sections of Local Menu shows corresponding items",
+              "fullTitle": "Local Menu Clicking on sub sections of Local Menu shows corresponding items",
+              "timedOut": null,
+              "duration": 5873,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "cc8a932a-dcd3-46e2-a570-62838401c1b6",
+              "parentUUID": "4b4d6123-b900-406d-8fef-58ee4af458c2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f88914c3-dd19-4edc-9b9c-de3e59e13df6",
+            "dfda3623-65b1-4110-b289-b69b35dbf88d",
+            "d706dc83-7f5e-4898-be06-1ed627f8ace2",
+            "dde7a199-9665-42cb-8cab-8f273eb393c8",
+            "cc8a932a-dcd3-46e2-a570-62838401c1b6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 36781,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{ 
+    "baseUrl": "https://www.chick-fil-a.com",
+    "projectId": "pi1xp4",
+    "retries": { "runMode": 2, "openMode": 2 },
+    "chromeWebSecurity": false,
+    "defaultCommandTimeout": 60000,
+    "requestTimeout": 60000,
+    "pageLoadTimeout": 60000,
+    "viewportWidth": 1280,
+    "viewportHeight": 1080,
+    "testFiles": "**/*.{feature,features}",
+    "include": ["node_modules/cypress", "./cypress/**/*.js"],
+    "video": false,
+    "reporter": "../node_modules/mochawesome/src/mochawesome.js",
+    "reporterOptions": {
+      "reportDir": "cypress/results",
+      "overwrite": false,
+      "html": true,
+      "json": true
+    }
+  }
+  

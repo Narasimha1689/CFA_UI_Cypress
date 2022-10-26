@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-09-30T19:35:06.317Z",
+    "end": "2022-09-30T19:36:04.963Z",
+    "duration": 58646,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "da5d13f1-93ef-4273-a05c-f99574a99c24",
+      "title": "",
+      "fullFile": "cypress/integration/CreateAndDeleteImageAPI.feature",
+      "file": "cypress/integration/CreateAndDeleteImageAPI.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6a8505dd-00d7-40bb-800f-2fecfda27ff3",
+          "title": "Create And Delete Image API",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create an Image API Test",
+              "fullTitle": "Create And Delete Image API Create an Image API Test",
+              "timedOut": null,
+              "duration": 28935,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "54c65e8d-bbaa-44f6-88b0-4fa29f3cd4f7",
+              "parentUUID": "6a8505dd-00d7-40bb-800f-2fecfda27ff3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Delete created Image",
+              "fullTitle": "Create And Delete Image API Delete created Image",
+              "timedOut": null,
+              "duration": 23215,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "e7e23c5f-5876-47d1-900c-551e0a854b14",
+              "parentUUID": "6a8505dd-00d7-40bb-800f-2fecfda27ff3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "54c65e8d-bbaa-44f6-88b0-4fa29f3cd4f7",
+            "e7e23c5f-5876-47d1-900c-551e0a854b14"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 52150,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

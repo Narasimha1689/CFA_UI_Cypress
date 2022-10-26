@@ -1,0 +1,205 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 5,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-08-26T15:04:05.294Z",
+    "end": "2022-08-26T15:09:30.643Z",
+    "duration": 325349,
+    "testsRegistered": 6,
+    "passPercent": 83.33333333333334,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7db5b204-815a-446e-bdd9-f27c5444ae35",
+      "title": "",
+      "fullFile": "cypress/integration/NationalMenu.feature",
+      "file": "cypress/integration/NationalMenu.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6aab1912-afee-419e-bba6-6ab575f29707",
+          "title": "National Menu",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify availability message above menu",
+              "fullTitle": "National Menu Verify availability message above menu",
+              "timedOut": null,
+              "duration": 23366,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "c93b9b40-6ee3-4c6f-921e-9bb155a66c0f",
+              "parentUUID": "6aab1912-afee-419e-bba6-6ab575f29707",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Order pickup option on PDP takes user to PWO",
+              "fullTitle": "National Menu Order pickup option on PDP takes user to PWO",
+              "timedOut": null,
+              "duration": 19549,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "824ab82e-50af-4f5c-b54f-2599d1a4948a",
+              "parentUUID": "6aab1912-afee-419e-bba6-6ab575f29707",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Order delivery option on PDP takes user to delivery page",
+              "fullTitle": "National Menu Order delivery option on PDP takes user to delivery page",
+              "timedOut": null,
+              "duration": 13438,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "02367486-4dcc-4f22-adba-f80aed06a8cb",
+              "parentUUID": "6aab1912-afee-419e-bba6-6ab575f29707",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify url of all menu items",
+              "fullTitle": "National Menu Verify url of all menu items",
+              "timedOut": null,
+              "duration": 75315,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 60000ms: Expected to find element: `[href=\"/menu/1-white-milk\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 60000ms: Expected to find element: `[href=\"/menu/1-white-milk\"]`, but never found it.\n    at eval (https://www.chick-fil-a.com/__cypress/tests?p=cypress/integration/NationalMenu.feature:123:54)\nat Array.forEach (<anonymous>)\n    at Context.eval (https://www.chick-fil-a.com/__cypress/tests?p=cypress/integration/NationalMenu.feature:122:22)\n    at Context.resolveAndRunStepDefinition (https://www.chick-fil-a.com/__cypress/tests?p=cypress/integration/NationalMenu.feature:10761:29)\n    at Context.eval (https://www.chick-fil-a.com/__cypress/tests?p=cypress/integration/NationalMenu.feature:10082:35)",
+                "diff": null
+              },
+              "uuid": "f6b8e91e-8ba5-4520-8a81-cc9aba72c1b0",
+              "parentUUID": "6aab1912-afee-419e-bba6-6ab575f29707",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Order delivery option takes user to delivery page",
+              "fullTitle": "National Menu Order delivery option takes user to delivery page",
+              "timedOut": null,
+              "duration": 30953,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "f7e5fe10-7835-4d0e-a316-ede2ef99e0bf",
+              "parentUUID": "6aab1912-afee-419e-bba6-6ab575f29707",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Order pickup option takes user to order pickup PWO",
+              "fullTitle": "National Menu Order pickup option takes user to order pickup PWO",
+              "timedOut": null,
+              "duration": 18654,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "c10de57a-d1d0-4e3e-bb24-219389bdb5da",
+              "parentUUID": "6aab1912-afee-419e-bba6-6ab575f29707",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c93b9b40-6ee3-4c6f-921e-9bb155a66c0f",
+            "824ab82e-50af-4f5c-b54f-2599d1a4948a",
+            "02367486-4dcc-4f22-adba-f80aed06a8cb",
+            "f7e5fe10-7835-4d0e-a316-ede2ef99e0bf",
+            "c10de57a-d1d0-4e3e-bb24-219389bdb5da"
+          ],
+          "failures": [
+            "f6b8e91e-8ba5-4520-8a81-cc9aba72c1b0"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 181275,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

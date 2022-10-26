@@ -1,0 +1,205 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 0,
+    "pending": 5,
+    "failures": 1,
+    "start": "2022-08-24T11:53:38.839Z",
+    "end": "2022-08-24T12:09:17.273Z",
+    "duration": 938434,
+    "testsRegistered": 6,
+    "passPercent": 0,
+    "pendingPercent": 83.33333333333334,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 5,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "3968371b-dbfb-4925-b66d-14457432576b",
+      "title": "",
+      "fullFile": "cypress/integration/NationalMenu.feature",
+      "file": "cypress/integration/NationalMenu.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "018f5168-80e2-4807-b082-590b6ae2480f",
+          "title": "National Menu",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify availability message above menu",
+              "fullTitle": "National Menu Verify availability message above menu",
+              "timedOut": null,
+              "duration": 167,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// register this scenario with the cucumber data collector\n// but don't run it\n// Tell mocha this is a skipped test so it also shows correctly in Cypress\nconst state = window.testState;\ncy.then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() => state.onFinishScenario(scenario))\n  // eslint-disable-next-line func-names\n  .then(function () {\n    return this.skip();\n  });",
+              "err": {},
+              "uuid": "cfb5ff85-1f6c-476a-8287-4807e22b1e19",
+              "parentUUID": "018f5168-80e2-4807-b082-590b6ae2480f",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Order pickup option on PDP takes user to PWO",
+              "fullTitle": "National Menu Order pickup option on PDP takes user to PWO",
+              "timedOut": null,
+              "duration": 47,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// register this scenario with the cucumber data collector\n// but don't run it\n// Tell mocha this is a skipped test so it also shows correctly in Cypress\nconst state = window.testState;\ncy.then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() => state.onFinishScenario(scenario))\n  // eslint-disable-next-line func-names\n  .then(function () {\n    return this.skip();\n  });",
+              "err": {},
+              "uuid": "c9fdc292-e81e-4e7e-9dae-647aaa1d6ef0",
+              "parentUUID": "018f5168-80e2-4807-b082-590b6ae2480f",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Order delivery option on PDP takes user to delivery page",
+              "fullTitle": "National Menu Order delivery option on PDP takes user to delivery page",
+              "timedOut": null,
+              "duration": 35,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// register this scenario with the cucumber data collector\n// but don't run it\n// Tell mocha this is a skipped test so it also shows correctly in Cypress\nconst state = window.testState;\ncy.then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() => state.onFinishScenario(scenario))\n  // eslint-disable-next-line func-names\n  .then(function () {\n    return this.skip();\n  });",
+              "err": {},
+              "uuid": "841871d6-53bd-4d3e-ba10-ce06aced5371",
+              "parentUUID": "018f5168-80e2-4807-b082-590b6ae2480f",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Verify url of all menu items",
+              "fullTitle": "National Menu Verify url of all menu items",
+              "timedOut": null,
+              "duration": 387247,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 60000ms: Expected to find element: `[href=\"/menu/1-white-milk\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 60000ms: Expected to find element: `[href=\"/menu/1-white-milk\"]`, but never found it.\n    at eval (https://www.chick-fil-a.com/__cypress/tests?p=cypress/integration/NationalMenu.feature:123:54)\nat Array.forEach (<anonymous>)\n    at Context.eval (https://www.chick-fil-a.com/__cypress/tests?p=cypress/integration/NationalMenu.feature:122:22)\n    at Context.resolveAndRunStepDefinition (https://www.chick-fil-a.com/__cypress/tests?p=cypress/integration/NationalMenu.feature:10761:29)\n    at Context.eval (https://www.chick-fil-a.com/__cypress/tests?p=cypress/integration/NationalMenu.feature:10082:35)",
+                "diff": null
+              },
+              "uuid": "2821d645-d360-412b-acff-bec3051fb278",
+              "parentUUID": "018f5168-80e2-4807-b082-590b6ae2480f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Order delivery option takes user to delivery page",
+              "fullTitle": "National Menu Order delivery option takes user to delivery page",
+              "timedOut": null,
+              "duration": 184,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// register this scenario with the cucumber data collector\n// but don't run it\n// Tell mocha this is a skipped test so it also shows correctly in Cypress\nconst state = window.testState;\ncy.then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() => state.onFinishScenario(scenario))\n  // eslint-disable-next-line func-names\n  .then(function () {\n    return this.skip();\n  });",
+              "err": {},
+              "uuid": "b744a1a6-d0cd-4e95-87f1-a5f30d65d79d",
+              "parentUUID": "018f5168-80e2-4807-b082-590b6ae2480f",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Order pickup option takes user to order pickup PWO",
+              "fullTitle": "National Menu Order pickup option takes user to order pickup PWO",
+              "timedOut": null,
+              "duration": 47,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// register this scenario with the cucumber data collector\n// but don't run it\n// Tell mocha this is a skipped test so it also shows correctly in Cypress\nconst state = window.testState;\ncy.then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() => state.onFinishScenario(scenario))\n  // eslint-disable-next-line func-names\n  .then(function () {\n    return this.skip();\n  });",
+              "err": {},
+              "uuid": "8052ce13-05b2-4740-8a03-31f4967013c0",
+              "parentUUID": "018f5168-80e2-4807-b082-590b6ae2480f",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "2821d645-d360-412b-acff-bec3051fb278"
+          ],
+          "pending": [],
+          "skipped": [
+            "cfb5ff85-1f6c-476a-8287-4807e22b1e19",
+            "c9fdc292-e81e-4e7e-9dae-647aaa1d6ef0",
+            "841871d6-53bd-4d3e-ba10-ce06aced5371",
+            "b744a1a6-d0cd-4e95-87f1-a5f30d65d79d",
+            "8052ce13-05b2-4740-8a03-31f4967013c0"
+          ],
+          "duration": 387727,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
