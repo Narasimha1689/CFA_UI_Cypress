@@ -16,7 +16,7 @@ And('Click on Franchising Navigation Tab', ()=> {
         cy.get('.g-tabs__nav div span').contains("Franchising").click()
 });
 
-And('Verify the Image displayed on Franchising Navigation Tab', (dataTable)=> {
+Then('Verify the Image displayed on Franchising Navigation Tab', (dataTable)=> {
     dataTable.hashes().forEach(elem => {
         // cy.log(elem.imageLink)
         cy.get('.g-tabs__inner').find('img').eq(2).then($getSrc => {
@@ -28,22 +28,3 @@ And('Verify the Image displayed on Franchising Navigation Tab', (dataTable)=> {
     });
    
 });
-
-And('Click on Learn More button in Franchising Navigation Tab', ()=> {
-    cy.get('.g-tabs__inner a').eq(2).click()
-});
-
-And('Verify the Franchising URL launched', (dataTable)=> {
-    dataTable.hashes().forEach(elem => {
-        cy.url().should('eq', elem.FranchisingURL)
-    })  
-});
-
-And('Verify the header text in Franchising page', ()=> {
-    cy.get('.g-hero__text h1').should('contain', 'Franchising')
-});
-
-And('Verify the images count displayed in the Franchising Page', ()=> {
-    cy.get('.img-wrapper').find('img:visible').should('have.length','8')
-});
-

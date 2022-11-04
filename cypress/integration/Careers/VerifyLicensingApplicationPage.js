@@ -47,28 +47,9 @@ And('Click on Apply now link in Licensing screen', ()=> {
     cy.get('.wrapper a').contains('Apply now').click()
 });
 
-And('Verify the URL launched and element validation', (dataTable)=> {
+Then('Verify the Licensing Application URL launched and element validation', (dataTable)=> {
     dataTable.hashes().forEach(elem => {
         cy.url().should('eq', elem.applyNowPageURL)
     }) ;
     cy.get("button[type='submit']").should('be.visible')
 });
-
-And('Click on franchise opportunities link', ()=> {
-    cy.get('.intro a').invoke('removeAttr', 'target').click()
-});
-
-And('verify user navigated to franchise screen URL', (dataTable)=> {
-    dataTable.hashes().forEach(elem => {
-        cy.url().should('eq', elem.franchiseScreenURL)
-    }) ;
-});
-
-And('Verify and play the video', ()=> {
-    cy.get('.g-video__play-btn svg').eq(0).click({force:true})
-});
-
-And('Verify the images count on franchise screen', ()=> {
-    cy.get('.icon img:visible').should('have.length', '4')
-});
-

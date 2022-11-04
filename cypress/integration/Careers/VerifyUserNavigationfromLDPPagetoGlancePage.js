@@ -16,24 +16,11 @@ And('Click on LDP Navigation Tab', ()=> {
         cy.get('.g-tabs__nav div span').contains("LDP").click()
 });
 
-And('Verify the Image displayed on LDP Navigation Tab', (dataTable)=> {
-    dataTable.hashes().forEach(elem => {
-        // cy.log(elem.imageLink)
-        cy.get('.g-tabs__inner').find('img').eq(3).then($getSrc => {
-            const srcImage = $getSrc.attr('src')
-            // cy.log(srcImage)
-            expect(srcImage).to.be.contains(elem.imageLink)
-        })
-        
-    });
-   
-});
-
 And('Click on Learn More button in LDP Navigation Tab', ()=> {
     cy.get('.g-tabs__inner a').eq(3).click()
 });
 
-And('Verify the LDP URL launched', (dataTable)=> {
+Then('Verify the LDP URL launched', (dataTable)=> {
     dataTable.hashes().forEach(elem => {
         cy.url().should('eq', elem.LDPURL)
     })  
@@ -47,7 +34,7 @@ And('Click on Learn More link in LDP screen', ()=> {
     cy.get('.no-dotted a').first().click()
 });
 
-And('Verify the URL launched and element validation in glance page', (dataTable)=> {
+Then('Verify the URL launched and element validation in glance page', (dataTable)=> {
     dataTable.hashes().forEach(elem => {
         cy.url().should('eq', elem.glancePageURL)
     }) ;
