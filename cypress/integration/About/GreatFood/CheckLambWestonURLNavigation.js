@@ -11,12 +11,14 @@ And('Verify Great Food Header Text Page in Great Food page', () => {
     })
 });
 
-Then('Verify download the report in Great Food page', (dataTable) => {
-        cy.get('.cta-container a').should('be.visible')
-        // .click()
-        // cy.wait(10000)
-        // cy.readFile('cypress\downloads\Chick-fil-A 2021 Corporate Social Responsibility Report.pdf')
-        //   .should('exist')
+Then('Verify Lamb Weston URL navigation in Great Food page', (dataTable) => {
+   dataTable.hashes().forEach(elem => {
+    cy.get('.content p a:visible').contains(elem.paragraphLinks)
+      .focus()
+      .click({force:true})
+    cy.url().should('contain', elem.greatFoodURLNavigation)    
+    cy.get('.cmp-brand-hero_background--transparentblue  h2').last().should('contain','Explore our potato possibilities')           
+    });
 });
 
 
