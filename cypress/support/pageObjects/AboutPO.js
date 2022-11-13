@@ -18,7 +18,7 @@ class About_PO {
         cy.get('.btn-container a')
           .first()
           .contains('Read about our commitment')
-          .click()
+          .click({force:true})
     }
 
     TextValidation() {
@@ -26,12 +26,26 @@ class About_PO {
     }
 
     ClickOnPurchaseTickets() {
-        cy.get('.wrapper .left a').invoke('removeAttr', 'target').click()
+        cy.get('.wrapper .left a').invoke('removeAttr', 'target').click({force:true})
     }
 
     VerifyReservationHomePage() {
         cy.url().should('include', 'Home/Reservation')
     }
+
+//     NavigateToAboutSubMenuURL(page) {
+//     switch (page) {
+//         case "Great Food":
+//             cy.visit('/about/great-food')
+//             break;
+//         case "Giving Back":
+//             cy.visit('/about/giving-back')
+//             break;
+//         default:
+//             assert.isNotOk('everything', 'Page not found.')
+//             break;
+//     }
+//   }
 }
 
 export const about_PO = new About_PO();
