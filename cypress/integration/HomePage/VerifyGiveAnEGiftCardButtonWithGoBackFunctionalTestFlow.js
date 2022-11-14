@@ -27,7 +27,7 @@ And('Verify Chick-fil-A pop up section', (dataTable)=> {
 });
 
 And('Click on Go Back button', (dataTable)=> {
-    cy.get('.actions').find('a').contains('Go back').click().should('not.exist', {timeout:8000})
+    cy.get('.actions').find('a').contains('Go back').click()
 });
 
 Then('User should return back to the Home page', (dataTable)=> {

@@ -149,7 +149,7 @@ Feature: Chick-fil-A One Home Page Validations
             | Join Chick-fil-A One   |
         And Check Header line and Image in day part animated section in Home Page
     
-    Scenario: Verify Content Header line text paragraph and Image Links in Home Page
+    Scenario: Verify Content Header text and Image Links in Home Page
         Given I am on the ".Com homepage" page
         And Mousehover on the Chick-fil-A One Icon logo and and click it
         And Verify Promo banner section Paragraphs
@@ -163,13 +163,29 @@ Feature: Chick-fil-A One Home Page Validations
             | Nutrition and allergens       | https://d1fd34dzzl09j.cloudfront.net/Images/CFACOM/Home%20Page%20Refresh/Allergens.png/Allergens.png?h=75&w=51&la=en                                                                               | 2     |
             | Food you can smile about      | https://d1fd34dzzl09j.cloudfront.net/Images/CFACOM/Home%20Page%20Refresh/May%20Menu%20Module/Updated%20May%20Menu%20Module%2005%2031/Trio_Sandwich_Desktop_535%20x%20467_Zoom.jpg?h=467&w=535&la=en| 3     |
             | Earn points on your next order| https://d1fd34dzzl09j.cloudfront.net/Images/CFACOM/Home%20Page%20Refresh/Cling-06_red.png?h=125&w=125&la=en                                                                                        | 4     |
+        
+    Scenario: Verify Header lines in each section in Home Page
+        Given I am on the ".Com homepage" page
+        And Mousehover on the Chick-fil-A One Icon logo and and click it
+        And Verify Promo banner section Paragraphs
+            | ParagraphText          |
+            | Make every order count |
+            | Join Chick-fil-A One   |
         And Check Header line in each section in Home Page
             | headerLineText                               | index |
             | Catering for any gathering                   | 0     |
             | The gift of Chick-fil-A® is always in season | 1     |
             | Made with you in mind                        | 2     |
-            | Start earning                                | 3    |
-        Then Check Paragraph in each section in Home Page
+            | Start earning                                | 3     |
+    
+    Scenario: Verify Paragraph content in each section in Home Page
+        Given I am on the ".Com homepage" page
+        And Mousehover on the Chick-fil-A One Icon logo and and click it
+        And Verify Promo banner section Paragraphs
+            | ParagraphText          |
+            | Make every order count |
+            | Join Chick-fil-A One   |
+        Then Check Paragraph text in each section in Home Page
             | paragraphText                                         | index |
             | If feeding a crowd is in your future, try Chick-fil-A | 0     |
             | Whether you're in the mood for a freshly prepared     | 1     |
