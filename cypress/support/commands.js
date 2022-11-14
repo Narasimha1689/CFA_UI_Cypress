@@ -279,3 +279,10 @@ Cypress.Commands.add('getLocationIframeBody', () => {
 //     expect(resp).to.have.property('headers')
 //   });
 // });
+
+//In Home Page, buttons click function
+Cypress.Commands.add('homeButtonsClickFunc', (buttonsSelector) => {
+  cy.get('.flex-wrapper .btn-round')
+    .contains(buttonsSelector)
+    .click()
+})
