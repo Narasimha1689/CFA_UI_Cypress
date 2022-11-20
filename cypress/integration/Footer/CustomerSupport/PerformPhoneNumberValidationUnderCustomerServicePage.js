@@ -17,15 +17,8 @@ Then('Check Header Text and URL Navigation by clicking on Customer Support link 
   });
 });
 
-And('Check Each section Image and Paragraph in Suspicious Activity Row', (dataTable) => {
-    dataTable.hashes().forEach((elem, index) => {
-      cy.get('.customer-support-quick-links').find('img').eq(index).then($getSrc => {
-        const srcImage = $getSrc.attr('src')
-        expect(srcImage).to.be.contains(elem.imageLink)
-    })
-
-        cy.get('.customer-support-quick-links')
-          .find('p')
-          .should('contain', elem.paragraphText)
-    });
+And('Verify Phone Number Details', ()=> {
+    cy.get('.call-info__text a')
+      .invoke('text')
+      .should('match', '\d')
 });

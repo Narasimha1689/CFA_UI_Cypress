@@ -40,8 +40,10 @@ And('Verify the URL navigations', (dataTable) => {
 });
 
 Then('Click on the first ques and verify the URL Navigation', (dataTable) => {
+    cy.wait(3000)
     dataTable.hashes().forEach(elem => {
-        cy.get('iframe').find("div[class='HitchhikerStandard-title'] a")
+        // cy.get('iframe').find("div[class='HitchhikerStandard-title'] a")
+        cy.get('.HitchhikerStandard-titleLink')
           .eq(0)
           .click({force:true})
 
