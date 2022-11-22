@@ -10,7 +10,7 @@ Then('Check Header Text and URL Navigation by clicking on Customer Support link 
       cy.get('.footer-nav li')
       .find('a')
       .contains('Customer Support')
-      .click()
+      .click({force:true})
 
       cy.get('.customer-support-search-header h1').should('contain', elem.headerText)
       cy.url().should('include',elem.urlNavigation)
@@ -20,5 +20,5 @@ Then('Check Header Text and URL Navigation by clicking on Customer Support link 
 And('Verify Phone Number Details', ()=> {
     cy.get('.call-info__text a')
       .invoke('text')
-      .should('match', '\d')
+      .should('contain', '1-866-232-2040')
 });
