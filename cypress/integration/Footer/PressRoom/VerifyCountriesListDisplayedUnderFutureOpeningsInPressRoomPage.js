@@ -38,3 +38,11 @@ Then('Verify Each URL navigation after clicking on Each Country Link', (dataTabl
           .should('contain',elem.countriesList)
       });
 });
+
+Then('Verify the count of countries list dispalyed is 6', () => {
+  cy.wait(3000)
+        cy.scrollTo('center')
+        cy.get('#future-openings-id dd')
+          .should('have.length',6)
+      
+});

@@ -30,7 +30,3 @@ And('Verify the header text in Franchising page', ()=> {
     cy.get('.g-hero__text h1').should('contain', 'Franchising')
 });
 
-And('Verify the images count displayed in the Franchising Page', ()=> {
-    cy.get('.img-wrapper').find('img:visible').should('have.length','8')
-});
-

@@ -15,6 +15,12 @@ And('Verify Promo banner section Paragraphs', (dataTable) => {
     });
 });
 
+And('Click on shop eGift Card button', ()=> {
+    cy.get('.btn-container a')
+      .contains('Shop eGift cards')
+      .click()
+});
+
 And('Click on Give an eGift Card button', ()=> {
     cy.get('.btn-container a')
       .contains('Give an eGift Card')
@@ -27,7 +33,14 @@ And('Verify Chick-fil-A pop up and click on Continue button', (dataTable)=> {
 });
 
 Then('Verify the URL displayed', (dataTable)=> {
-    cy.get('#btnChooseNext1').should('be.visible')
+    // cy.get('#btnChooseNext1').should('be.visible')
+    dataTable.hashes().forEach(elem => {
+        cy.url().should('contain', elem.URLNavigation)
+    });
+});
+
+Then('Verify the shop ecard url displayed', (dataTable)=> {
+    cy.get('.btn-container .ewk-egift').should('contain','Purchase an eGift Card')
     dataTable.hashes().forEach(elem => {
         cy.url().should('contain', elem.URLNavigation)
     });

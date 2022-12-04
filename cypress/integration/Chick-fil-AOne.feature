@@ -1,3 +1,4 @@
+@Regression
 Feature: Chick-fil-A One Menu Validations
 
     Scenario: Navigate to Chick-fil-A One page and Check Header Text and Image

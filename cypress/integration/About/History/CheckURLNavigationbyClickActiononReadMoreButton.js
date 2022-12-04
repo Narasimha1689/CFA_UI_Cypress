@@ -34,7 +34,7 @@ Then('Verify Image validation in Humble Beginnings page', (dataTable) => {
 
 Then('Click on cfa-stories section and verify the new URL Launched', (dataTable)=> {
     dataTable.hashes().forEach(elem => {
-        cy.get('.flex .cfa-stories a').eq(1).click()
+        cy.get('.flex .cfa-stories a').eq(2).click()
         cy.url().should('contain',elem.celebratingTruett)
     })
     cy.get('.article-details h1').should('contain','Celebrating Truett on his 100th Birthday')

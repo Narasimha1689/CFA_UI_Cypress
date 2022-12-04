@@ -11,11 +11,11 @@ And('Check Header Text in Who We Are Page', () => {
     })
 });
 
-Then('Click on Executive Bio Page link and Verify user navigated to respective URL page', (dataTable) => {
+Then('Check Executive Bio Page Names displayed', (dataTable) => {
     dataTable.hashes().forEach((elem, index) => {
-        cy.get('.award-blurb').find('a').eq(index).click({force:true})
-        cy.url().should('contain',elem.navURL)
-        cy.go('back')
+        cy.get('.mini-facts h3 strong')
+          .eq(index)
+          .should('contain',elem.bioPageNames)
     });
  });
  

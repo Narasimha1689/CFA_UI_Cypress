@@ -1,3 +1,4 @@
+@Regression
 Feature: Footer section validations
 
     Scenario: All Footer Elements Exists or not
@@ -44,7 +45,7 @@ Feature: Footer section validations
         And Verify Footer section is visible or not
         Then Check Merchandise URL Navigation in Footer Section
             | urlNavigation |
-            | https://www.cfaapparel.com |
+            | shop.chick-fil-a.com |
     
     Scenario: Verify Header Text and URL Navigation by clicking on Customer Support link in Footer Section
         Given I am on the ".Com homepage" page
@@ -65,9 +66,9 @@ Feature: Footer section validations
         And Verify the URL navigations
             | rewarsUrlNavigation                                               | rewardsHeaderText |
             | https://www.chick-fil-a.com/customer-support/search?query=rewards | FAQs              |
-        Then Click on the first ques and verify the URL Navigation
-            | firstQuesURLNavigation |
-            | https://www.chick-fil-a.com/customer-support/chick-fil-a-one-membership-program/points-and-rewards/how-do-i-receive-points-towards-rewards-of-my-choice |
+        # Then Click on the first ques and verify the URL Navigation
+        #     | firstQuesURLNavigation |
+        #     | https://www.chick-fil-a.com/customer-support/chick-fil-a-one-membership-program/points-and-rewards/how-do-i-receive-points-towards-rewards-of-my-choice |
     
     Scenario: Verify Each section Image and Paragraph in Suspicious Activity Row
         Given I am on the ".Com homepage" page
@@ -289,21 +290,21 @@ Feature: Footer section validations
             | Chick-fil-A Helps Spark Joy This Season with    | Chick-fil-A is welcoming back seasonal favorites Peppermint Chip Milkshake        | 1     |
             | First Chick-fil-A Restaurant on O‘ahu to Open   | Read about the second Chick-fil-A restaurant in the state of Hawai‘i to open      | 2     |
             | Chick-fil-A Expands Retail Footprint with Salad | 12 fluid ounce bottles of Chick-fil-A's popular salad dressings are piloting      | 3     |
-    
-    Scenario: Verify Future Openings Flow in Press Room Page
-        Given I am on the ".Com homepage" page
-        And Verify Footer section is visible or not
-        Then Check Header Text and URL Navigation by clicking on Press Room Page
-            | urlNavigation                                  | headerText     |
-            | https://www.chick-fil-a.com/stories/press-room | The Press Room |
-        And Check Future Openings header text in Press Room page
-            | headerText      |
-            | Future Openings |
-        Then Verify Each URL navigation after clicking on Each Country Link
-            | urlNavigation                                        | index |
-            | https://www.chick-fil-a.com/locations/ia/pella-ia    | 0     |
-            | https://www.chick-fil-a.com/locations/tx/mercedes-tx | 1     |
-            | https://www.chick-fil-a.com/locations/mi/monroe-mi   | 2     |
+    # 
+    # Scenario: Verify Future Openings Flow in Press Room Page
+    #     Given I am on the ".Com homepage" page
+    #     And Verify Footer section is visible or not
+    #     Then Check Header Text and URL Navigation by clicking on Press Room Page
+    #         | urlNavigation                                  | headerText     |
+    #         | https://www.chick-fil-a.com/stories/press-room | The Press Room |
+    #     And Check Future Openings header text in Press Room page
+    #         | headerText      |
+    #         | Future Openings |
+        # Then Verify Each URL navigation after clicking on Each Country Link
+        #     | urlNavigation                                        | index |
+        #     | https://www.chick-fil-a.com/locations/ia/pella-ia    | 0     |
+        #     | https://www.chick-fil-a.com/locations/tx/mercedes-tx | 1     |
+        #     | https://www.chick-fil-a.com/locations/mi/monroe-mi   | 2     |
     
     Scenario: Verify countries list displayed underFuture Openings in Press Room Page
         Given I am on the ".Com homepage" page
@@ -315,14 +316,15 @@ Feature: Footer section validations
             | headerText      |
             | Future Openings |
         And Click on Show More link
-        Then Verify Each URL navigation after clicking on Each Country Link
-            | countriesList     | index |
-            | Pella (IA)        | 0     |
-            | Mercedes [TX]     | 1     |
-            | Monroe (MI)       | 2     |
-            | Meyer Park Center | 3     |
-            | Springfield (OH)  | 4     |
-            | Citadel Crossing  | 5     |
+        Then Verify the count of countries list dispalyed is 6
+        # Then Verify Each URL navigation after clicking on Each Country Link
+        #     | countriesList     | index |
+        #     | Pella (IA)        | 0     |
+        #     | Mercedes [TX]     | 1     |
+        #     | Monroe (MI)       | 2     |
+        #     | Meyer Park Center | 3     |
+        #     | Springfield (OH)  | 4     |
+        #     | Citadel Crossing  | 5     |
     
     Scenario: Verify Press Contacts Flow in Press Room Page
         Given I am on the ".Com homepage" page
@@ -408,6 +410,290 @@ Feature: Footer section validations
             | Sandwich Toppings | 14    |
             | Salad Toppings    | 15    |
             | Soup Toppings     | 16    |
-        
+      
+    Scenario: Verify Footer Validations from About Who We Are Page
+        Given I am on the "About Who We Are" page
+        When Check URL Navigation and Header Text in Who We Are Page
+            | urlNavigation                                | headerText |
+            | https://www.chick-fil-a.com/about/who-we-are | who we are |
+        And Verify Footer section is visible or not
+        Then Check All Footer elements Exists or NOT
+            | footerElements                              | index |
+            | Nutrition & Allergens                       | 0     |
+            | Customer Support                            | 1     |
+            | Careers                                     | 2     |
+            | Franchising                                 | 3     |
+            | Merchandise                                 | 4     |
+            | Press Room                                  | 5     |
+            | Do business with us                         | 6     |
+            | Terms and Conditions of Use                 | 7     |
+            | Privacy Policy                              | 8     |
+            | California Privacy Notice                   | 9     |
+            | Cookie and Internet-Based Advertising Policy| 10    |
+            | Cookie Preference Center                    | 11    |
+            | Accessibility                               | 12    |
+            | Locations listing                           | 13    |
+            | Legal                                       | 14    |
+        Then Check All Social Media Icons Exists or NOT
+            | socialMediaIcons | index |
+            | Facebook         | 0     |
+            | Instagram        | 1     |
+            | Twitter          | 2     |
+            | YouTube          | 3     |
+            | LinkedIn         | 4     |
+    
+    Scenario: Verify Footer Validations from About Great Food Page
+        Given I am on the "About Great Food" page
+        When Check URL Navigation and Header Text in Great Food Page
+            | urlNavigation                                | headerText |
+            | https://www.chick-fil-a.com/about/great-food | great food |
+        And Verify Footer section is visible or not
+        Then Check All Footer elements Exists or NOT
+            | footerElements                              | index |
+            | Nutrition & Allergens                       | 0     |
+            | Customer Support                            | 1     |
+            | Careers                                     | 2     |
+            | Franchising                                 | 3     |
+            | Merchandise                                 | 4     |
+            | Press Room                                  | 5     |
+            | Do business with us                         | 6     |
+            | Terms and Conditions of Use                 | 7     |
+            | Privacy Policy                              | 8     |
+            | California Privacy Notice                   | 9     |
+            | Cookie and Internet-Based Advertising Policy| 10    |
+            | Cookie Preference Center                    | 11    |
+            | Accessibility                               | 12    |
+            | Locations listing                           | 13    |
+            | Legal                                       | 14    |
+        Then Check All Social Media Icons Exists or NOT
+            | socialMediaIcons | index |
+            | Facebook         | 0     |
+            | Instagram        | 1     |
+            | Twitter          | 2     |
+            | YouTube          | 3     |
+            | LinkedIn         | 4     |
+    
+    Scenario: Verify Footer Validations from About Giving Back Page
+        Given I am on the "About Giving Back" page
+        When Check URL Navigation and Header Text in Giving Back Page
+            | urlNavigation                                 | headerText  |
+            | https://www.chick-fil-a.com/about/giving-back | giving back |
+        And Verify Footer section is visible or not
+        Then Check All Footer elements Exists or NOT
+            | footerElements                              | index |
+            | Nutrition & Allergens                       | 0     |
+            | Customer Support                            | 1     |
+            | Careers                                     | 2     |
+            | Franchising                                 | 3     |
+            | Merchandise                                 | 4     |
+            | Press Room                                  | 5     |
+            | Do business with us                         | 6     |
+            | Terms and Conditions of Use                 | 7     |
+            | Privacy Policy                              | 8     |
+            | California Privacy Notice                   | 9     |
+            | Cookie and Internet-Based Advertising Policy| 10    |
+            | Cookie Preference Center                    | 11    |
+            | Accessibility                               | 12    |
+            | Locations listing                           | 13    |
+            | Legal                                       | 14    |
+        Then Check All Social Media Icons Exists or NOT
+            | socialMediaIcons | index |
+            | Facebook         | 0     |
+            | Instagram        | 1     |
+            | Twitter          | 2     |
+            | YouTube          | 3     |
+            | LinkedIn         | 4     |
+    
+    Scenario: Verify Footer Validations from About History Page
+        Given I am on the "About History" page
+        When Check URL Navigation and Header Text in History Page
+            | urlNavigation                             | headerText |
+            | https://www.chick-fil-a.com/about/history | history |
+        And Verify Footer section is visible or not
+        Then Check All Footer elements Exists or NOT
+            | footerElements                              | index |
+            | Nutrition & Allergens                       | 0     |
+            | Customer Support                            | 1     |
+            | Careers                                     | 2     |
+            | Franchising                                 | 3     |
+            | Merchandise                                 | 4     |
+            | Press Room                                  | 5     |
+            | Do business with us                         | 6     |
+            | Terms and Conditions of Use                 | 7     |
+            | Privacy Policy                              | 8     |
+            | California Privacy Notice                   | 9     |
+            | Cookie and Internet-Based Advertising Policy| 10    |
+            | Cookie Preference Center                    | 11    |
+            | Accessibility                               | 12    |
+            | Locations listing                           | 13    |
+            | Legal                                       | 14    |
+        Then Check All Social Media Icons Exists or NOT
+            | socialMediaIcons | index |
+            | Facebook         | 0     |
+            | Instagram        | 1     |
+            | Twitter          | 2     |
+            | YouTube          | 3     |
+            | LinkedIn         | 4     |
+    
+    Scenario: Verify Footer Validations from About S.TruttCathyBrandRestaurants Page
+        Given I am on the "About s-truett-cathy" page
+        When Check URL Navigation and Header Text in About S.TruttCathyBrandRestaurants Page
+            | urlNavigation                                                      | headerText                        |
+            | https://www.chick-fil-a.com/about/s-truett-cathy-brand-restaurants | s. truett cathy brand restaurants |
+        And Verify Footer section is visible or not
+        Then Check All Footer elements Exists or NOT
+            | footerElements                              | index |
+            | Nutrition & Allergens                       | 0     |
+            | Customer Support                            | 1     |
+            | Careers                                     | 2     |
+            | Franchising                                 | 3     |
+            | Merchandise                                 | 4     |
+            | Press Room                                  | 5     |
+            | Do business with us                         | 6     |
+            | Terms and Conditions of Use                 | 7     |
+            | Privacy Policy                              | 8     |
+            | California Privacy Notice                   | 9     |
+            | Cookie and Internet-Based Advertising Policy| 10    |
+            | Cookie Preference Center                    | 11    |
+            | Accessibility                               | 12    |
+            | Locations listing                           | 13    |
+            | Legal                                       | 14    |
+        Then Check All Social Media Icons Exists or NOT
+            | socialMediaIcons | index |
+            | Facebook         | 0     |
+            | Instagram        | 1     |
+            | Twitter          | 2     |
+            | YouTube          | 3     |
+            | LinkedIn         | 4     |
+
+    Scenario: Verify Footer Validations from Stories Food Page
+        Given   I am on the "Stories" page
+        When I click on the "Food" section
+        When Check URL Navigation and Header Text in Stories Food Page
+            | urlNavigation                            | headerText |
+            | https://www.chick-fil-a.com/stories/food | food       |
+        And Verify Footer section is visible or not
+        Then Check All Footer elements Exists or NOT
+            | footerElements                              | index |
+            | Nutrition & Allergens                       | 0     |
+            | Customer Support                            | 1     |
+            | Careers                                     | 2     |
+            | Franchising                                 | 3     |
+            | Merchandise                                 | 4     |
+            | Press Room                                  | 5     |
+            | Do business with us                         | 6     |
+            | Terms and Conditions of Use                 | 7     |
+            | Privacy Policy                              | 8     |
+            | California Privacy Notice                   | 9     |
+            | Cookie and Internet-Based Advertising Policy| 10    |
+            | Cookie Preference Center                    | 11    |
+            | Accessibility                               | 12    |
+            | Locations listing                           | 13    |
+            | Legal                                       | 14    |
+        Then Check All Social Media Icons Exists or NOT
+            | socialMediaIcons | index |
+            | Facebook         | 0     |
+            | Instagram        | 1     |
+            | Twitter          | 2     |
+            | YouTube          | 3     |
+            | LinkedIn         | 4     |
+
+    Scenario: Verify Footer Validations from Stories Lifestyle Page
+        Given   I am on the "Stories" page
+        When I click on the Lifestyle section
+        When Verify URL Navigation and Header Text in Stories Lifestyle Page
+            | urlNavigation                                 | headerText |
+            | https://www.chick-fil-a.com/stories/lifestyle | lifestyle  | 
+        And Verify Footer section is visible or not
+        Then Check All Footer elements Exists or NOT
+            | footerElements                              | index |
+            | Nutrition & Allergens                       | 0     |
+            | Customer Support                            | 1     |
+            | Careers                                     | 2     |
+            | Franchising                                 | 3     |
+            | Merchandise                                 | 4     |
+            | Press Room                                  | 5     |
+            | Do business with us                         | 6     |
+            | Terms and Conditions of Use                 | 7     |
+            | Privacy Policy                              | 8     |
+            | California Privacy Notice                   | 9     |
+            | Cookie and Internet-Based Advertising Policy| 10    |
+            | Cookie Preference Center                    | 11    |
+            | Accessibility                               | 12    |
+            | Locations listing                           | 13    |
+            | Legal                                       | 14    |
+        Then Check All Social Media Icons Exists or NOT
+            | socialMediaIcons | index |
+            | Facebook         | 0     |
+            | Instagram        | 1     |
+            | Twitter          | 2     |
+            | YouTube          | 3     |
+            | LinkedIn         | 4     |
+    
+    Scenario: Verify Footer Validations from Stories Inside ChickfilA Page
+        Given   I am on the "Stories" page
+        When I click on the Inside ChickfilA section
+        When Verify URL Navigation and Header Text in Stories Inside ChickfilA Page
+            | urlNavigation                                          | headerText  |
+            | https://www.chick-fil-a.com/stories/inside-chick-fil-a | inside chick-fil-a | 
+        And Verify Footer section is visible or not
+        Then Check All Footer elements Exists or NOT
+            | footerElements                              | index |
+            | Nutrition & Allergens                       | 0     |
+            | Customer Support                            | 1     |
+            | Careers                                     | 2     |
+            | Franchising                                 | 3     |
+            | Merchandise                                 | 4     |
+            | Press Room                                  | 5     |
+            | Do business with us                         | 6     |
+            | Terms and Conditions of Use                 | 7     |
+            | Privacy Policy                              | 8     |
+            | California Privacy Notice                   | 9     |
+            | Cookie and Internet-Based Advertising Policy| 10    |
+            | Cookie Preference Center                    | 11    |
+            | Accessibility                               | 12    |
+            | Locations listing                           | 13    |
+            | Legal                                       | 14    |
+        Then Check All Social Media Icons Exists or NOT
+            | socialMediaIcons | index |
+            | Facebook         | 0     |
+            | Instagram        | 1     |
+            | Twitter          | 2     |
+            | YouTube          | 3     |
+            | LinkedIn         | 4     |
+    
+    Scenario: Verify Footer Validations from Stories News Page
+        Given   I am on the "Stories" page
+        When I click on the News section
+        When Verify URL Navigation and Header Text in Stories News Page
+            | urlNavigation                                  | headerText     |
+            | https://www.chick-fil-a.com/stories/press-room | the press room | 
+        And Verify Footer section is visible or not
+        Then Check All Footer elements Exists or NOT
+            | footerElements                              | index |
+            | Nutrition & Allergens                       | 0     |
+            | Customer Support                            | 1     |
+            | Careers                                     | 2     |
+            | Franchising                                 | 3     |
+            | Merchandise                                 | 4     |
+            | Press Room                                  | 5     |
+            | Do business with us                         | 6     |
+            | Terms and Conditions of Use                 | 7     |
+            | Privacy Policy                              | 8     |
+            | California Privacy Notice                   | 9     |
+            | Cookie and Internet-Based Advertising Policy| 10    |
+            | Cookie Preference Center                    | 11    |
+            | Accessibility                               | 12    |
+            | Locations listing                           | 13    |
+            | Legal                                       | 14    |
+        Then Check All Social Media Icons Exists or NOT
+            | socialMediaIcons | index |
+            | Facebook         | 0     |
+            | Instagram        | 1     |
+            | Twitter          | 2     |
+            | YouTube          | 3     |
+            | LinkedIn         | 4     |
+    
+    
     
     

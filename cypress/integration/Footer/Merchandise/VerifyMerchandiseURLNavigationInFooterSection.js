@@ -12,7 +12,10 @@ Then('Check Merchandise URL Navigation in Footer Section', (dataTable) => {
         .contains('Merchandise')
         .click()
 
-        cy.get('div h2').should('contain', 'Thanks for stopping by our shop')
         cy.url().should('include',elem.urlNavigation)
+        cy.get('.rich-text__button-wrapper a')
+          .first()
+          .should('be.visible')
+          .click()        
     });
 });

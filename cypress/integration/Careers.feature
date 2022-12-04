@@ -1,3 +1,4 @@
+@Regression
 Feature: Careers menu
 
     Scenario: Verify Careers page Header Text
@@ -93,7 +94,6 @@ Feature: Careers menu
             | FranchisingURL |
             | https://www.chick-fil-a.com/franchise |
         And Verify the header text in Franchising page
-        And Verify the images count displayed in the Franchising Page
     
     Scenario: Verify User Navigation from LDP Page to Glance Page
         Given I am on the ".Com homepage" page
@@ -232,7 +232,6 @@ Feature: Careers menu
             | EmploymentOpportunityURL |
             | https://www.chick-fil-a.com/careers/team-member-employment/employment-opportunities |
         And Verify the "Join Us" header in the Employment Opportunity Page
-        Then Verify the images count displayed in the Employment Opportunity Page
     
     Scenario: LDP tab Image Check Validation
         Given I am on the ".Com homepage" page

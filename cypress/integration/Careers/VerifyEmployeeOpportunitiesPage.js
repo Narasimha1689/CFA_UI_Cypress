@@ -39,7 +39,3 @@ Then('User should navigate to Employement Opportunities page', (dataTable)=> {
 And('Verify the "Join Us" header in the Employment Opportunity Page', (dataTable)=> {
     cy.get('.header h2').should('contain','Join us')   
 });
-
-Then('Verify the images count displayed in the Employment Opportunity Page', ()=> {
-    cy.get('.img-wrapper').find('img').should('have.length','4')
-});

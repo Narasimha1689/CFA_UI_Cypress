@@ -1,32 +1,46 @@
+@Regression
 Feature: Chick-fil-A One Home Page Validations
-
+    
     Scenario: Verify Home Page and Check User Navigation after clicking on Sign Up
         Given I am on the ".Com homepage" page
         And Mousehover on the Chick-fil-A One Icon logo and and click it
         Then Verify Promo banner section Image
             | ImageLink |
-            | https://d1fd34dzzl09j.cloudfront.net/Images/CFACOM/Home%20Page%20Refresh/CFA_Icon_CFAOne2_Red_PMS_new.png?h=288&w=288&la=en |
-        And Verify Promo banner section Paragraphs
-            | ParagraphText          |
-            | Make every order count |
-            | Join Chick-fil-A One   |
+            | https://d1fd34dzzl09j.cloudfront.net/Images/CFACOM/Evergreen%202021/SEGGold%20LG3.png?h=61&w=112&la=en |
+        # And Verify Promo banner section Paragraphs
+        #     | ParagraphText          |
+        #     | Make every order count |
+        #     | Join Chick-fil-A One   |
         And Click on the Sign Up button
         Then Verify the URL Navigations
             | URLNavigation |
-            | https://www.chick-fil-a.com/one |
-
-    Scenario: Verify Give an eGift Card button with Continue Functional Test Flow
+            # | https://www.chick-fil-a.com/one |
+            | https://www.evergreenhills.com/en?utm_campaign=GM_NAT_evergreen_holiday_nov_22&utm_source=banner&utm_medium=web&utm_content=homepage_banner |
+    
+    # Scenario: Verify Give an eGift Card button with Continue Functional Test Flow
+    #     Given I am on the ".Com homepage" page
+    #     And Mousehover on the Chick-fil-A One Icon logo and and click it
+    #     # And Verify Promo banner section Paragraphs
+    #     #     | ParagraphText          |
+    #     #     | Make every order count |
+    #     #     | Join Chick-fil-A One   |
+    #     And Click on Give an eGift Card button
+    #     And Verify Chick-fil-A pop up and click on Continue button
+    #     Then Verify the URL displayed
+    #         | URLNavigation     |
+    #         | cfa.wgiftcard.com |
+    
+    Scenario: Verify shop eGift Card button
         Given I am on the ".Com homepage" page
         And Mousehover on the Chick-fil-A One Icon logo and and click it
-        And Verify Promo banner section Paragraphs
-            | ParagraphText          |
-            | Make every order count |
-            | Join Chick-fil-A One   |
-        And Click on Give an eGift Card button
-        And Verify Chick-fil-A pop up and click on Continue button
-        Then Verify the URL displayed
+        # And Verify Promo banner section Paragraphs
+        #     | ParagraphText          |
+        #     | Make every order count |
+        #     | Join Chick-fil-A One   |
+        And Click on shop eGift Card button
+        Then Verify the shop ecard url displayed
             | URLNavigation     |
-            | cfa.wgiftcard.com |
+            | https://www.chick-fil-a.com/gift-cards/egift-cards |
     
     Scenario: Verify Give an eGift Card button with Go Back Functional Test Flow
         Given I am on the ".Com homepage" page

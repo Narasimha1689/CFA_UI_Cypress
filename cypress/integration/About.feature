@@ -1,3 +1,4 @@
+@Regression
 Feature: About menu
 
     Scenario: Navigate to Who We are page by About Click
@@ -355,12 +356,12 @@ Feature: About menu
             | Chick-fil-A Shared Table™ program       | 2     | https://www.chick-fil-a.com/sharedtable                                           |
             | Chick-fil-A Impact Accelerator          | 3     | https://www.chickfilaimpactaccelerator.com/                                       |
             | give back                               | 4     | https://www.chick-fil-a.com/~/link.aspx?_id=4B5252A4F69D4CA2988A248B79EB29C2&_z=z |
-
-    Scenario: Verify Executive Bio Page URL Navigations
+    
+    Scenario: Verify Executive Bio Page Names list validations
         Given I am on the "About Who We Are" page
         And Check Header Text in Who We Are Page
-        Then Click on Executive Bio Page link and Verify user navigated to respective URL page
-            | index | navURL |
-            | 0     | https://www.chick-fil-a.com/board-officers/board-of-directors/dan-cathy |
-            | 1     | https://www.chick-fil-a.com/board-officers/board-of-directors/bubba-cathy |
-            | 2     | https://www.chick-fil-a.com/board-officers/other-bios/trudy-cathy-white |
+        Then Check Executive Bio Page Names displayed
+            | index | bioPageNames            |
+            | 0     | Dan T. Cathy            |
+            | 1     | Donald (Bubba) M. Cathy |
+            | 2     | Trudy Cathy White       |

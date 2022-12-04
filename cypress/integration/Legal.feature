@@ -1,3 +1,4 @@
+@Regression
 Feature: Footer section (legal) validations
 
     Scenario: Verify Header Text and URL validation after clicking on Do Business With Us link
@@ -356,7 +357,6 @@ Feature: Footer section (legal) validations
             | Wisconsin (WI)                       | 46    |
             | Wyoming (WY)                         | 47    |
     
-    @focus
     Scenario: Click any of the state in Locations Listing and verify the Address location
         Given I am on the ".Com homepage" page
         And Verify Footer section is visible or not
@@ -370,7 +370,6 @@ Feature: Footer section (legal) validations
             | addressLoc           | urlNavigation                                   | headerText        | 
             | Birmingham, AL 35205 | https://www.chick-fil-a.com/locations/browse/al | Location listings |
     
-    @focus
     Scenario: Click on any of the location in Locations Listing and verify the Address
         Given I am on the ".Com homepage" page
         And Verify Footer section is visible or not

@@ -30,7 +30,7 @@ And('Click on the Sign Up button', ()=> {
 });
 
 Then('Verify the URL Navigations', (dataTable)=> {
-    cy.get('.generic-text-panel .wrapper').find('a').should('be.visible')
+    // cy.get('.generic-text-panel .wrapper').find('a').should('be.visible')
 
     dataTable.hashes().forEach(elem => {
         cy.url().should('contain', elem.URLNavigation)
