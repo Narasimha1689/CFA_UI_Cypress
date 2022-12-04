@@ -1,3 +1,5 @@
 cypress/results/
 node_modules/
-node_modules/watchify/node_modules/
+cypress/screenshots
+cypress/screenshots
+cypress/videos
