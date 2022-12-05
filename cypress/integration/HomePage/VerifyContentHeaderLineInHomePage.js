@@ -17,7 +17,10 @@ And('Verify Promo banner section Paragraphs', (dataTable) => {
 
 And('Check Header line in each section in Home Page', (dataTable)=> {
     dataTable.hashes().forEach((elem, index) => {
-        cy.get('.flex-wrapper .content .headline').eq(index).then($HeaderLineText => {
+        // cy.get('.flex-wrapper .content .headline').eq(index).then($HeaderLineText => {
+            cy.get("[class^='classic-callout grid-layout white-card'] .icon-container p")
+              .eq(index)
+              .then($HeaderLineText => {
             expect($HeaderLineText.text()).to.be.contains(elem.headerLineText)
         }); 
     });

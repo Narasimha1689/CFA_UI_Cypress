@@ -19,6 +19,12 @@ And('Click on See Our Catering Menu button', ()=> {
     cy.homeButtonsClickFunc('See our catering menu')
 });
 
+And('Click on View Our Catering Menu button', ()=> {
+    cy.get('.overlay-full-callout .message-container a')
+      .should('contain','View catering menu')
+      .click()
+});
+
 Then('Verify the URL NAvigation', (dataTable)=> {
     cy.get('.menu-hero-text  a').should('be.visible')
     dataTable.hashes().forEach(elem => {

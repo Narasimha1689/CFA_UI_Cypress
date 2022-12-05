@@ -16,7 +16,10 @@ And('Verify Promo banner section Paragraphs', (dataTable) => {
 });
 
 Then('Click on Join Today button and check the URL NAvigation', (dataTable)=> {
-    cy.homeButtonsClickFunc('Join today')
+    // cy.homeButtonsClickFunc('Join today')
+    cy.get("[class$='white-card card-classic'] .message-container a")
+      .eq(1)
+      .click()
 
     cy.wait(5000)
     cy.get('.btn-container').find('a').contains('Get started').should('be.visible')

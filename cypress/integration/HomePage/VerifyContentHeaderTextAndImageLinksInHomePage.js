@@ -17,11 +17,17 @@ And('Verify Promo banner section Paragraphs', (dataTable) => {
 
 Then('Check Content Header text and Image Links in Home Page', (dataTable)=> {
     dataTable.hashes().forEach((elem, index) => {
-        cy.get('.flex-wrapper .content h4').eq(index).then($contentHeaderText => {
+        // cy.get('.flex-wrapper .content h4').eq(index).then($contentHeaderText => {
+            cy.get("[class='classic-callout grid-layout white-card card-classic'] .title-text h2")
+              .eq(index)
+              .then($contentHeaderText => {
             expect($contentHeaderText.text()).to.be.contains(elem.ContentHeaderText)
         }) 
         
-        cy.get('.flex-wrapper .desktop-img').eq(index).then($getSrc => {
+        // cy.get('.flex-wrapper .desktop-img').eq(index).then($getSrc => {
+        cy.get("[class='classic-callout grid-layout white-card card-classic'] div.img-container img.desktop-img")
+          .eq(index)
+          .then($getSrc => {
             const srcImage = $getSrc.attr('src')
             expect(srcImage).to.be.contains(elem.ImageLinks)
         }) 

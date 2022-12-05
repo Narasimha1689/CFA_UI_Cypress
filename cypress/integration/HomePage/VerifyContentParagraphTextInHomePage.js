@@ -17,7 +17,11 @@ And('Verify Promo banner section Paragraphs', (dataTable) => {
 
 Then('Check Paragraph text in each section in Home Page', (dataTable)=> {
     dataTable.hashes().forEach((elem, index) => {
-        cy.get('.flex-wrapper .content p').eq(index).then($paragraphText => {
+        // cy.get('.flex-wrapper .content p').eq(index).then($paragraphText => {
+
+            cy.get("[class='classic-callout grid-layout white-card card-classic'] .body-text p")
+              .eq(index)
+              .then($paragraphText => {            
             expect($paragraphText.text()).to.be.contains(elem.paragraphText)
         });
     });
