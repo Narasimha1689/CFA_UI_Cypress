@@ -1,5 +1,5 @@
 When('check for Limited Results Filter and Open College Football Hall of Fame location', () => {
-     cy.iframe('#locatoriframe').contains('Limited menu being served, no mobile ordering').should('be.visible').click();
+    //  cy.iframe('#locatoriframe').contains('Limited menu being served, no mobile ordering').should('be.visible').click();
      cy.iframe('#locatoriframe').contains('College Football Hall of Fame').should('be.visible').click();
      cy.checkPathName('college-football-hall-of-fame')
  })
