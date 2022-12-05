@@ -14,6 +14,7 @@ Then('I Navigate to First story on favourite stories', () => {
 
 And('Verify Facebook share button is visble when scrolled', () =>{
     cy.scrollTo('center')
+    cy.scrollTo('center')
     cy.get('[data-action="facebook"]').should('be.visible')
 })
 
@@ -27,7 +28,10 @@ When('I click on the Load More button', () =>{
 })
 
 Then('click on the one of the new stories',()=>{
-    cy.get(':nth-child(5) > .flex > .cfa-stories').click()
+    //cy.get('#story-landing-feed-id > :nth-child(2) > .flex > .news > :nth-child(3)').click();
+    cy.get(':nth-child(5) > .flex > .lifestyle > h3').click()
+    //cy.get(':nth-child(2) > .flex > .news > h3 > a').click()
+    // cy.get(':nth-child(5) > .flex > .cfa-stories').click()
 })
 
 Then('check for load more button showing again and click',()=>{
@@ -36,13 +40,13 @@ Then('check for load more button showing again and click',()=>{
 
 And('Check for related stories and open any related story',()=>{
     cy.get('.related > h2').should('contain','Related stories')
-    cy.get('.related > .flex > .cfa-stories').should('be.visible').click()
+    cy.get('.related > .flex > .cfa-stories').first().should('be.visible').click()
 })
 
 Then('check for Lets be friends and Social Media Icons',()=>{
     cy.get('.co-social').should('be.visible')
     cy.get('.co-social > .wrapper > .title').should('contain','Let’s be friends')
-    cy.get('.co-social > .wrapper > .tagline').should('contain','Over 10.5 million likes and subscribers')
+    //cy.get('.co-social > .wrapper > .tagline').should('contain','Over 10.5 million likes and subscribers')
     cy.get('.social-icons > .icon-facebook-over').should('be.visible')
     cy.get('.social-icons > .icon-twitter-over').should('be.visible')
     cy.get('.social-icons > .icon-instagram-over').should('be.visible')
