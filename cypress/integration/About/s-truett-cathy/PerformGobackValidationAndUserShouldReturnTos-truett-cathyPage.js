@@ -14,7 +14,7 @@ And('Check Header Text in s-truett-cathy page', () => {
 Then('Check URL navigation after clicking on Dwarf House Header Text in s-truett-cathy page', (dataTable) => {
     dataTable.hashes().forEach(elem => {
         cy.get('.g-round-card a').last().contains(elem.HeadersText).click()
-        cy.url().should('contain', elem.navURLs)
+        cy.url().should('contain', Cypress.config().baseUrl+ elem.navURLs)
         cy.get('.g-hero__text h1').should('contain', 'Dwarf House')
     });
  });
@@ -25,7 +25,7 @@ Then('Check URL navigation after clicking on Dwarf House Header Text in s-truett
 
  Then('user should return to s-truett-cathy page', (dataTable) => {
     dataTable.hashes().forEach(elem => {
-        cy.url().should('contain', elem.homePageURL)    
+        cy.url().should('contain', Cypress.config().baseUrl+elem.homePageURL)    
     });
     cy.get('.wrapper h1').then($getHeaderText => {
         expect($getHeaderText.text().toLowerCase()).to.equal('s. truett cathy brand restaurants')

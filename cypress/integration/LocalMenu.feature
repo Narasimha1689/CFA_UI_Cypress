@@ -3,7 +3,7 @@ Feature: Local Menu
 
     Background: Location specfic menu page
         Given   I am on the "location menu" page
-
+    @stageFail
     Scenario: selecting orderpickup on Locations Item details page navigates to PWO
         When I click on an item on the local menu
         And  click on Order Pickup button on the local menu

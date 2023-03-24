@@ -5,17 +5,17 @@ And('Verify Footer section is visible or not', ()=> {
       .should('be.visible')
 });
 
-Then('Check Header Text and URL Navigation by clicking on Customer Support link in Footer Section', (dataTable) => {
-  dataTable.hashes().forEach(elem => {
-      cy.get('.footer-nav li')
-      .find('a')
-      .contains('Customer Support')
-      .click({force:true})
+// Then('Check Header Text and URL Navigation by clicking on Customer Support link in Footer Section', (dataTable) => {
+//   dataTable.hashes().forEach(elem => {
+//       cy.get('.footer-nav li')
+//       .find('a')
+//       .contains('Customer Support')
+//       .click({force:true})
 
-      cy.get('.customer-support-search-header h1').should('contain', elem.headerText)
-      cy.url().should('include',elem.urlNavigation)
-  });
-});
+//       cy.get('.customer-support-search-header h1').should('contain', elem.headerText)
+//       cy.url().should('include',elem.urlNavigation)
+//   });
+// });
 
 And('Verify Phone Number Details', ()=> {
     cy.get('.call-info__text a')

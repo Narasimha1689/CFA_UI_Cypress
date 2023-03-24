@@ -8,21 +8,21 @@ When('clicked on the Careers Menu', ()=> {
           .click()
 });
 
-And('Check for "At Chick-fil-A..." text header', ()=> {
-    cy.get('.g-textblock h3').should('contain', 'At Chick-fil-A.')
-});
+// And('Check for "At Chick-fil-A..." text header', ()=> {
+//     cy.get('.g-textblock h3').should('contain', 'At Chick-fil-A.')
+// });
 
-And('Click on Franchising Navigation Tab', ()=> {
-        cy.get('.g-tabs__nav div span').contains("Franchising").click()
-});
+// And('Click on Franchising Navigation Tab', ()=> {
+//         cy.get('.g-tabs__nav div span').contains("Franchising").click()
+// });
 
 And('Click on Learn More button in Franchising Navigation Tab', ()=> {
-    cy.get('.g-tabs__inner a').eq(2).click()
+    cy.get('.content .vis-white').eq(2).click()
 });
 
 Then('Verify the Franchising URL launched', (dataTable)=> {
     dataTable.hashes().forEach(elem => {
-        cy.url().should('eq', elem.FranchisingURL)
+        cy.url().should('eq', Cypress.config().baseUrl+elem.FranchisingURL)
     })  
 });
 

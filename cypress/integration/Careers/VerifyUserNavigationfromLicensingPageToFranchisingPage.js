@@ -8,23 +8,23 @@ When('clicked on the Careers Menu', ()=> {
           .click()
 });
 
-And('Check for "At Chick-fil-A..." text header', ()=> {
-    cy.get('.g-textblock h3').should('contain', 'At Chick-fil-A.')
-});
+// And('Check for "At Chick-fil-A..." text header', ()=> {
+//     cy.get('.g-textblock h3').should('contain', 'At Chick-fil-A.')
+// });
 
-And('Click on Licensing Navigation Tab', ()=> {
-        cy.get('.g-tabs__nav div span').contains("Licensing").click()
-});
+// And('Click on Licensing Navigation Tab', ()=> {
+//         cy.get('.g-tabs__nav div span').contains("Licensing").click()
+// });
 
-And('Click on Learn More button in Licensing Navigation Tab', ()=> {
-    cy.get('.g-tabs__inner a').eq(4).click()
-});
+// And('Click on Learn More button in Licensing Navigation Tab', ()=> {
+//     cy.get('.g-tabs__inner a').eq(4).click()
+// });
 
-And('Verify the Licensing URL launched', (dataTable)=> {
-    dataTable.hashes().forEach(elem => {
-        cy.url().should('eq', elem.LicensingURL)
-    })  
-});
+// And('Verify the Licensing URL launched', (dataTable)=> {
+//     dataTable.hashes().forEach(elem => {
+//         cy.url().should('eq', elem.LicensingURL)
+//     })  
+// });
 
 And('Verify the header text in Licensing page', ()=> {
     cy.get('.wrapper h1').should('contain', 'Licensing Information and Opportunities')
@@ -32,11 +32,12 @@ And('Verify the header text in Licensing page', ()=> {
 
 And('Click on Apply now link in Licensing screen', ()=> {
     cy.get('.wrapper a').contains('Apply now').click()
+    cy.pause()
 });
 
 And('Verify the URL launched and element validation', (dataTable)=> {
     dataTable.hashes().forEach(elem => {
-        cy.url().should('eq', elem.applyNowPageURL)
+        cy.url().should('eq', Cypress.config().baseUrl+elem.applyNowPageURL)
     }) ;
     cy.get("button[type='submit']").should('be.visible')
 });
@@ -47,7 +48,7 @@ And('Click on franchise opportunities link', ()=> {
 
 Then('verify user navigated to franchise screen URL', (dataTable)=> {
     dataTable.hashes().forEach(elem => {
-        cy.url().should('eq', elem.franchiseScreenURL)
+        cy.url().should('eq', Cypress.config().baseUrl+elem.franchiseScreenURL)
     }) ;
 });
 

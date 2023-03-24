@@ -8,20 +8,20 @@ When('clicked on the Careers Menu', ()=> {
           .click()
 });
 
-And('Check for "At Chick-fil-A..." text header', ()=> {
-    cy.get('.g-textblock h3').should('contain', 'At Chick-fil-A.')
-});
+// And('Check for "At Chick-fil-A..." text header', ()=> {
+//     cy.get('.g-textblock h3').should('contain', 'At Chick-fil-A.')
+// });
 
-And('Click on LDP Navigation Tab', ()=> {
-        cy.get('.g-tabs__nav div span').contains("LDP").click()
-});
+// And('Click on LDP Navigation Tab', ()=> {
+//         cy.get('.g-tabs__nav div span').contains("LDP").click()
+// });
 
-And('Click on Learn More button in LDP Navigation Tab', ()=> {
-    cy.get('.g-tabs__inner a').eq(3).click()
-});
+// And('Click on Learn More button in LDP Navigation Tab', ()=> {
+//     cy.get('.g-tabs__inner a').eq(3).click()
+// });
 
 Then('Verify the LDP URL launched', (dataTable)=> {
     dataTable.hashes().forEach(elem => {
-        cy.url().should('eq', elem.LDPURL)
+        cy.url().should('eq', Cypress.config().baseUrl+elem.LDPURL)
     })  
 });

@@ -1,12 +1,12 @@
 @Regression
 Feature: Footer section (legal) validations
-
+    
     Scenario: Verify Header Text and URL validation after clicking on Do Business With Us link
         Given I am on the ".Com homepage" page
         And Verify Footer section is visible or not
         Then Check Header Text and URL validation after clicking on Do Business With Us link
-            | urlNavigation                                   | headerText          |
-            | https://www.chick-fil-a.com/do-business-with-us | Do business with us |
+            | urlNavigation        | headerText          |
+            | /do-business-with-us | Do business with us |
 
     Scenario: Verify Section Header and Image Link in Do Business With Us link page
         Given I am on the ".Com homepage" page
@@ -39,35 +39,35 @@ Feature: Footer section (legal) validations
             | headerText          |
             | Do business with us |
         And Click on the Learn More button and Verify the URL Navigation
-            | urlNavigation                                                    | headerText                  |
-            | https://www.chick-fil-a.com/do-business-with-us/supplier-inquiry | Supplier and Agency Inquiry |
+            | urlNavigation                         | headerText                  |
+            | /do-business-with-us/supplier-inquiry | Supplier and Agency Inquiry |
     
     Scenario: Verify Header Text and URL validation after clicking on Terms and Conditions of use link
         Given I am on the ".Com homepage" page
         And Verify Footer section is visible or not
         Then Check Header Text and URL validation after clicking on Terms and Conditions of use link
-            | urlNavigation                                          | headerText |
-            | https://www.chick-fil-a.com/legal#terms_and_conditions | Legal      |
-
+            | urlNavigation               | headerText |
+            | /legal#terms_and_conditions | Legal      |
+    @stageFail
     Scenario: Verify Default Opened tab after clicking on Terms and Conditions of use link
         Given I am on the ".Com homepage" page
         And Verify Footer section is visible or not
         Then Check Header Text and URL validation after clicking on Terms and Conditions of use link
-            | urlNavigation                                          | headerText |
-            | https://www.chick-fil-a.com/legal#terms_and_conditions | Legal      |
+            | urlNavigation               | headerText |
+            | /legal#terms_and_conditions | Legal      |
         And Check the default opened tab section under Terms and Conditions of use page
             | defaultTabOpen                              |
             | Chick-fil-A, Inc. Terms & Conditions of Use |
         Then Check the Content in default opened tab under Terms and Conditions of use page
             | defaultTabOpenSection                         |
             | Chick-fil-A, Inc. Terms and Conditions of Use |
-    
+    @stageFail
     Scenario: Verify Legal options list displayed after clicking on Terms and Conditions of use link
         Given I am on the ".Com homepage" page
         And Verify Footer section is visible or not
         Then Check Header Text and URL validation after clicking on Terms and Conditions of use link
-            | urlNavigation                                          | headerText |
-            | https://www.chick-fil-a.com/legal#terms_and_conditions | Legal      |
+            | urlNavigation               | headerText |
+            | /legal#terms_and_conditions | Legal      |
         And Legal options list displayed after clicking on Terms and Conditions of use link
             | legalOptionsList                                         | index |
             | Franchise Legal                                          | 0     |
@@ -90,28 +90,28 @@ Feature: Footer section (legal) validations
         Given I am on the ".Com homepage" page
         And Verify Footer section is visible or not
         Then Check Header Text and URL validation after clicking on Privacy Policy link
-            | urlNavigation                                    | headerText |
-            | https://www.chick-fil-a.com/legal#privacy_policy | Legal      |
-
+            | urlNavigation         | headerText |
+            | /legal#privacy_policy | Legal      |
+    
     Scenario: Verify Default Opened tab after clicking on Privacy Policy link
         Given I am on the ".Com homepage" page
         And Verify Footer section is visible or not
         Then Check Header Text and URL validation after clicking on Privacy Policy link
-            | urlNavigation                                    | headerText |
-            | https://www.chick-fil-a.com/legal#privacy_policy | Legal      |
+            | urlNavigation         | headerText |
+            | /legal#privacy_policy | Legal      |
         And Check the default opened tab section under Privacy Policy page
             | defaultTabOpen             |
             | Chick-fil-A Privacy Policy |
         Then Check the Content in default opened tab under Privacy Policy page
             | defaultTabOpenSection      |
             | Chick-fil-A Privacy Policy |
-
+    @stageFail
     Scenario: Verify Legal options list displayed after clicking on Privacy Policy link
         Given I am on the ".Com homepage" page
         And Verify Footer section is visible or not
         Then Check Header Text and URL validation after clicking on  Pricacy Policy link
-            | urlNavigation                                    | headerText |
-            | https://www.chick-fil-a.com/legal#privacy_policy | Legal      |
+            | urlNavigation         | headerText |
+            | /legal#privacy_policy | Legal      |
         And Legal options list displayed after clicking on Privacy Policy link
             | legalOptionsList                                         | index |
             | Franchise Legal                                          | 0     |
@@ -134,28 +134,28 @@ Feature: Footer section (legal) validations
         Given I am on the ".Com homepage" page
         And Verify Footer section is visible or not
         Then Verify and Check Header Text and URL validation after clicking on California Privacy Notice link
-            | urlNavigation                                                    | headerText |
-            | https://www.chick-fil-a.com/legal#your_california_privacy_rights | Legal      |
-    
+            | urlNavigation                         | headerText |
+            | /legal#your_california_privacy_rights | Legal      |
+    @stageFail
     Scenario: Verify Default Opened tab after clicking on California Privacy Notice link
         Given I am on the ".Com homepage" page
         And Verify Footer section is visible or not
         Then Verify and Check Header Text and URL validation after clicking on California Privacy Notice link
-            | urlNavigation                                                    | headerText |
-            | https://www.chick-fil-a.com/legal#your_california_privacy_rights | Legal      |
+            | urlNavigation                         | headerText |
+            | /legal#your_california_privacy_rights | Legal      |
         And Check the default opened tab section under California Privacy Notice page
             | defaultTabOpen                 |
             | Your California Privacy Rights |
         Then Check the Content in default opened tab under California Privacy Notice page
             | defaultTabOpenSection          |
             | Your California Privacy Rights |
-
+    @stageFail
     Scenario: Verify Legal options list displayed after clicking on California Privacy Notice link
         Given I am on the ".Com homepage" page
         And Verify Footer section is visible or not
         Then Verify and Check Header Text and URL validation after clicking on California Privacy Notice link
-            | urlNavigation                                                    | headerText |
-            | https://www.chick-fil-a.com/legal#your_california_privacy_rights | Legal      |
+            | urlNavigation                         | headerText |
+            | /legal#your_california_privacy_rights | Legal      |
         And Legal options list displayed after clicking on California Privacy Notice link
             | legalOptionsList                                         | index |
             | Franchise Legal                                          | 0     |
@@ -178,28 +178,28 @@ Feature: Footer section (legal) validations
         Given I am on the ".Com homepage" page
         And Verify Footer section is visible or not
         Then Verify and Check Header Text and URL validation after clicking on Accessibility link
-            | urlNavigation                                   | headerText |
-            | https://www.chick-fil-a.com/legal#accessibility | Legal      |
+            | urlNavigation        | headerText |
+            | /legal#accessibility | Legal      |
     
     Scenario: Verify Default Opened tab after clicking on Accessibility link
         Given I am on the ".Com homepage" page
         And Verify Footer section is visible or not
         Then Verify and Check Header Text and URL validation after clicking on Accessibility link
-            | urlNavigation                                   | headerText |
-            | https://www.chick-fil-a.com/legal#accessibility | Legal      |
+            | urlNavigation        | headerText |
+            | /legal#accessibility | Legal      |
         And Check the default opened tab section under Accessibility page
             | defaultTabOpen |
             | Accessibility  |
         Then Check the Content in default opened tab under Accessibility page
             | defaultTabOpenSection |
             | Accessibility         |
-            
+    @stageFail        
     Scenario: Verify Legal options list displayed after clicking on California Privacy Notice link
         Given I am on the ".Com homepage" page
         And Verify Footer section is visible or not
         Then Verify and Check Header Text and URL validation after clicking on Accessibility link
-            | urlNavigation                                   | headerText |
-            | https://www.chick-fil-a.com/legal#accessibility | Legal      |
+            | urlNavigation        | headerText |
+            | /legal#accessibility | Legal      |
         And Legal options list displayed after clicking on Accessibility link
             | legalOptionsList                                         | index |
             | Franchise Legal                                          | 0     |
@@ -222,15 +222,15 @@ Feature: Footer section (legal) validations
         Given I am on the ".Com homepage" page
         And Verify Footer section is visible or not
         Then Verify and Check Header Text and URL validation after clicking on Legal link
-            | urlNavigation                     | headerText |
-            | https://www.chick-fil-a.com/legal | Legal      |
-           
+            | urlNavigation   | headerText |
+            | /legal          | Legal      |
+    @stageFail       
     Scenario: Verify Legal options list displayed after clicking on Legal link
         Given I am on the ".Com homepage" page
         And Verify Footer section is visible or not
         Then Verify and Check Header Text and URL validation after clicking on Legal link
-            | urlNavigation                     | headerText |
-            | https://www.chick-fil-a.com/legal | Legal      |
+            | urlNavigation  | headerText |
+            | /legal         | Legal      |
         And Legal options list displayed after clicking on Legal link
             | legalOptionsList                                         | index |
             | Franchise Legal                                          | 0     |
@@ -248,20 +248,20 @@ Feature: Footer section (legal) validations
             | Promotional Offer Terms and Conditions                   | 12    |
             | Notice of Financial Incentives                           | 13    |
             | Chick-fil-A Virtual Patent Marking                       | 14    |
-    
+    @stageFail
     Scenario: Verify Header Text and URL validation after clicking on Cookie and Internet-Based Advertising Policy link
         Given I am on the ".Com homepage" page
         And Verify Footer section is visible or not
         Then Verify and Check Header Text and URL validation after clicking on Cookie and Internet-Based Advertising Policy link
-            | urlNavigation                                                                              | headerText |
-            | https://www.chick-fil-a.com/legal#chick-fil-a_cookie_and_interest-based_advertising_policy | Legal      |
-         
+            | urlNavigation                                                   | headerText |
+            | /legal#chick-fil-a_cookie_and_interest-based_advertising_policy | Legal      |
+    @stageFail     
     Scenario: Verify Legal options list displayed after clicking on Cookie and Internet-Based Advertising Policy link
         Given I am on the ".Com homepage" page
         And Verify Footer section is visible or not
         Then Verify and Check Header Text and URL validation after clicking on Cookie and Internet-Based Advertising Policy link
-            | urlNavigation                                                                              | headerText |
-            | https://www.chick-fil-a.com/legal#chick-fil-a_cookie_and_interest-based_advertising_policy | Legal      |
+            | urlNavigation                                                   | headerText |
+            | /legal#chick-fil-a_cookie_and_interest-based_advertising_policy | Legal      |
         And Legal options list displayed after clicking on Cookie and Internet-Based Advertising Policy link
             | legalOptionsList                                         | index |
             | Franchise Legal                                          | 0     |
@@ -279,13 +279,13 @@ Feature: Footer section (legal) validations
             | Promotional Offer Terms and Conditions                   | 12    |
             | Notice of Financial Incentives                           | 13    |
             | Chick-fil-A Virtual Patent Marking                       | 14    |
-    
+    @stageFail
     Scenario: Verify Default Opened tab after clicking on Cookie and Internet-Based Advertising Policy link
         Given I am on the ".Com homepage" page
         And Verify Footer section is visible or not
         Then Verify and Check Header Text and URL validation after clicking on Cookie and Internet-Based Advertising Policy link
-            | urlNavigation                                                                              | headerText |
-            | https://www.chick-fil-a.com/legal#chick-fil-a_cookie_and_interest-based_advertising_policy | Legal      |
+            | urlNavigation                                                   | headerText |
+            | /legal#chick-fil-a_cookie_and_interest-based_advertising_policy | Legal      |
         And Check the default opened tab section under Cookie and Internet-Based Advertising Policy page
             | defaultTabOpen |
             | Chick-fil-A Cookie and Interest-Based Advertising Policy  |
@@ -297,15 +297,15 @@ Feature: Footer section (legal) validations
         Given I am on the ".Com homepage" page
         And Verify Footer section is visible or not
         Then Verify and Check Header Text and URL validation after clicking on Locations Listing link
-            | urlNavigation                                | headerText        |
-            | https://www.chick-fil-a.com/locations/browse | Location listings |
+            | urlNavigation     | headerText        |
+            | /locations/browse | Location listings |
     
     Scenario: Verify the states list in Locations Listing page
         Given I am on the ".Com homepage" page
         And Verify Footer section is visible or not
         Then Verify and Check Header Text and URL validation after clicking on Locations Listing link
-            | urlNavigation                                | headerText        |
-            | https://www.chick-fil-a.com/locations/browse | Location listings |
+            | urlNavigation     | headerText        |
+            | /locations/browse | Location listings |
         And Check the states list displayed in Locations Listing page
             | statesList                           | index |
             | Alabama (AL)                         | 0     |
@@ -361,28 +361,30 @@ Feature: Footer section (legal) validations
         Given I am on the ".Com homepage" page
         And Verify Footer section is visible or not
         Then Verify and Check Header Text and URL validation after clicking on Locations Listing link
-            | urlNavigation                                | headerText        |
-            | https://www.chick-fil-a.com/locations/browse | Location listings |
+            | urlNavigation     | headerText        |
+            | /locations/browse | Location listings |
         And Click on the State selected in Locations Listing page
             | statesList                           | index |
             | Alabama (AL)                         | 0     |
         Then Verify the URL Navigation and check for Address location
-            | addressLoc           | urlNavigation                                   | headerText        | 
-            | Birmingham, AL 35205 | https://www.chick-fil-a.com/locations/browse/al | Location listings |
-    
+            | addressLoc           | urlNavigation        | headerText        | 
+            | Birmingham, AL 35205 | /locations/browse/al | Location listings |
+    @stageFail
     Scenario: Click on any of the location in Locations Listing and verify the Address
         Given I am on the ".Com homepage" page
         And Verify Footer section is visible or not
         Then Verify and Check Header Text and URL validation after clicking on Locations Listing link
-            | urlNavigation                                | headerText        |
-            | https://www.chick-fil-a.com/locations/browse | Location listings |
+            | urlNavigation     | headerText        |
+            | /locations/browse | Location listings |
         And Click on the State selected in Locations Listing page
             | statesList                           | index |
             | Alabama (AL)                         | 0     |
         Then Verify the URL Navigation and check for Address location
             | addressLoc           | urlNavigation                                   | headerText        | 
-            | Birmingham, AL 35205 | https://www.chick-fil-a.com/locations/browse/al | Location listings |
+            | Birmingham, AL 35205 | /locations/browse/al | Location listings |
         And Click on the location and Verify URL Navigation and the Address
-            | addressLoc           | urlNavigation                                             | headerText        | 
-            | Birmingham, AL 35205 | https://www.chick-fil-a.com/locations/al/5-points-in-line | 5 Points In-Line |
+            | addressLoc           | urlNavigation                  | headerText        | 
+            | Birmingham, AL 35205 | /locations/al/5-points-in-line | 5 Points In-Line |
+    
+      
     

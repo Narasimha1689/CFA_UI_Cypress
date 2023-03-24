@@ -18,7 +18,7 @@ Then('Click on Read More link', ()=> {
 
 And('Verify the URL Launched', (dataTable)=> {
     dataTable.hashes().forEach(elem => {
-        cy.url().should('contain', elem.humbleBeginningsURL)
+        cy.url().should('contain', Cypress.config().baseUrl+elem.humbleBeginningsURL)
     });
     cy.get('.article-details h1').should('be.visible')          
 });
@@ -35,7 +35,7 @@ Then('Verify Image validation in Humble Beginnings page', (dataTable) => {
 Then('Click on cfa-stories section and verify the new URL Launched', (dataTable)=> {
     dataTable.hashes().forEach(elem => {
         cy.get('.flex .cfa-stories a').eq(2).click()
-        cy.url().should('contain',elem.celebratingTruett)
+        cy.url().should('contain',Cypress.config().baseUrl+elem.celebratingTruett)
     })
     cy.get('.article-details h1').should('contain','Celebrating Truett on his 100th Birthday')
 });

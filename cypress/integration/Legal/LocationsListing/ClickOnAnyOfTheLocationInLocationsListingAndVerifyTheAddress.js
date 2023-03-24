@@ -5,17 +5,17 @@ And('Verify Footer section is visible or not', ()=> {
       .should('be.visible')
 });
 
-Then('Verify and Check Header Text and URL validation after clicking on Locations Listing link', (dataTable) => {
-    dataTable.hashes().forEach(elem => {
-        cy.get('.footer-nav li')
-          .find('a')
-          .contains('Locations listing')
-          .click()
+// Then('Verify and Check Header Text and URL validation after clicking on Locations Listing link', (dataTable) => {
+//     dataTable.hashes().forEach(elem => {
+//         cy.get('.footer-nav li')
+//           .find('a')
+//           .contains('Locations listing')
+//           .click()
 
-        cy.get('.wrapper h1').should('contain', elem.headerText)
-        cy.url().should('include',elem.urlNavigation)
-    });
-});
+//         cy.get('.wrapper h1').should('contain', elem.headerText)
+//         cy.url().should('include',Cypress.config().baseUrl+elem.urlNavigation)
+//     });
+// });
 
 And('Click on the State selected in Locations Listing page', (dataTable)=> {
   dataTable.hashes().forEach((elem,index) => {
@@ -26,13 +26,13 @@ And('Click on the State selected in Locations Listing page', (dataTable)=> {
   });
 });
 
-Then('Verify the URL Navigation and check for Address location', (dataTable)=> {
-  dataTable.hashes().forEach(elem => {
-    cy.get('.wrapper h1').should('contain', elem.headerText)
-    cy.url().should('include',elem.urlNavigation)
-    cy.get('.state-locations-list .location p').should('contain', elem.addressLoc)
-  });
-});
+// Then('Verify the URL Navigation and check for Address location', (dataTable)=> {
+//   dataTable.hashes().forEach(elem => {
+//     cy.get('.wrapper h1').should('contain', elem.headerText)
+//     cy.url().should('include',elem.urlNavigation)
+//     cy.get('.state-locations-list .location p').should('contain', elem.addressLoc)
+//   });
+// });
 
 And('Click on the location and Verify URL Navigation and the Address', (dataTable)=> {
   dataTable.hashes().forEach(elem => {
@@ -42,7 +42,7 @@ And('Click on the location and Verify URL Navigation and the Address', (dataTabl
       .click()
 
     cy.get('.location-title-header h1').should('contain', elem.headerText)
-    cy.url().should('include',elem.urlNavigation)
+    cy.url().should('include',Cypress.config().baseUrl+elem.urlNavigation)
     cy.get('.split-content .address').should('contain', elem.addressLoc)
   });
 });

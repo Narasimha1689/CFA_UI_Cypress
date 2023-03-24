@@ -18,7 +18,7 @@ And('check URL navigations after clicking on Ready To Join links in Chick-fil-A 
           .should('contain', elem.readyToJoinLinks)
           .click({force:true})
 
-          cy.url().should('contain',elem.urlValidation)
+          cy.url().should('contain',Cypress.config().baseUrl+elem.urlValidation)
           cy.get("h2[class='toggle active'][aria-expanded='true']").should('be.visible')
           cy.go('back')
         })

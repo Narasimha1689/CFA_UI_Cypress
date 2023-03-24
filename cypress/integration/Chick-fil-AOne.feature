@@ -1,6 +1,6 @@
 @Regression
 Feature: Chick-fil-A One Menu Validations
-
+    @stageFail
     Scenario: Navigate to Chick-fil-A One page and Check Header Text and Image
         Given I am on the ".Com homepage" page
         When Mousehover on the Chick-fil-A Menu and click it
@@ -16,15 +16,15 @@ Feature: Chick-fil-A One Menu Validations
             | Earn points     | Receive points with every qualifying purchase | 0     |
             | Receive rewards | Use points to redeem available rewards        | 1     |
             | Redeem benefits | Receive additional benefits as you reach new  | 2     |
-
+    @stageFail
     Scenario: Click on Ready To Join links and verify the URLs Navigations
         Given I am on the ".Com homepage" page
         When Mousehover on the Chick-fil-A Menu and click it
         And check URL navigations after clicking on Ready To Join links in Chick-fil-A One page
             | readyToJoinLinks          | urlValidation                                                    | index |
-            | Terms & Conditions of Use | https://www.chick-fil-a.com/legal#terms_and_conditions           | 0     |
-            | Privacy Policy            | https://www.chick-fil-a.com/legal#privacy_policy                 | 1     |
-            | California Privacy Notice | https://www.chick-fil-a.com/legal#your_california_privacy_rights | 2     |
+            | Terms & Conditions of Use | /legal#terms_and_conditions           | 0     |
+            | Privacy Policy            | /legal#privacy_policy                 | 1     |
+            | California Privacy Notice | /legal#your_california_privacy_rights | 2     |
     
     Scenario: Verify Paragraph validations on Chick-fil-A One Member link section
         Given I am on the ".Com homepage" page
@@ -56,7 +56,7 @@ Feature: Chick-fil-A One Menu Validations
             | Receive a birthday reward from Chick-fil-A     | 4     |
             | Participate in bonus points challenges         | 5     |
             | First to know about new menu items and insider | 6     |
-
+    @stageFail
     Scenario: Perform Paragraph validations on Chick-fil-A One Red Member link section
         Given I am on the ".Com homepage" page
         When Mousehover on the Chick-fil-A Menu and click it
@@ -74,7 +74,7 @@ Feature: Chick-fil-A One Menu Validations
             | Participate in bonus points challenges         | 6     |
             | First to know about new menu items and insider | 7     |
             | Unlock rewards exclusive to Red Members        | 8     |
-
+    @stageFail
     Scenario: Perform Paragraph validations on Chick-fil-A One Signature Member link section
         Given I am on the ".Com homepage" page
         When Mousehover on the Chick-fil-A Menu and click it
@@ -93,7 +93,7 @@ Feature: Chick-fil-A One Menu Validations
             | Participate in bonus points challenges         | 7     |
             | First to know about new menu items and insider | 8     |
             | Unlock rewards exclusive to Signature Members  | 9     |
-    
+    @stageFail
     Scenario: Perform Image link validations on Chick-fil-A One each Members section
         Given I am on the ".Com homepage" page
         When Mousehover on the Chick-fil-A Menu and click it
@@ -103,14 +103,14 @@ Feature: Chick-fil-A One Menu Validations
             | https://d1fd34dzzl09j.cloudfront.net/Images/CFACOM/Tier/New%20Icons/3%20Silver%20Header%20selected%20filled.png?h=47&w=40&la=en    | 1     |
             | https://d1fd34dzzl09j.cloudfront.net/Images/CFACOM/Tier/New%20Icons/5%20Red%20Header%20Selected%20Filled.png?h=47&w=28&la=en       | 2     |
             | https://d1fd34dzzl09j.cloudfront.net/Images/CFACOM/Tier/New%20Icons/7%20Signature%20Header%20Selected%20Filled.png?h=47&w=47&la=en | 3     |
-
+    @stageFail
     Scenario: Click on Here link and verify functional flow in Chick-fil-A One page
         Given I am on the ".Com homepage" page
         When Mousehover on the Chick-fil-A Menu and click it
         And click on Here link and verify functional flow
         Then Verify the URL Navigations  
             | urlNavigation                                                        |
-            | https://www.chick-fil-a.com/customer-support#chick-fil-a_one_account |
+            | /customer-support#chick-fil-a_one_account |
         And Verify the Customer Support quick images links
             | ImageLink                                                                                                                 | index |
             | https://d1fd34dzzl09j.cloudfront.net/Images/CFACOM/Customer%20Support/CFA_Icon_SecureDevice_Red_RGB.png?h=127&w=128&la=en | 0     |

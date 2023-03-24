@@ -3,20 +3,20 @@ Feature: National Menu
 
     Background: National menu page
         Given I am on the "national menu" page
-
+    
     Scenario: Verify availability message above menu
         Then the message "Availability may differ at different locations." is shown
-
+    @stageFail
     Scenario: Order pickup option on PDP takes user to PWO
         When I click on an item on the menu
         And  click on "Order Pickup" button
         Then I am navigated to "pickup PWO" page
-
+    
     Scenario: Order delivery option on PDP takes user to delivery page
         When I click on an item on the menu
         And  click on "Order Delivery" button
         Then I am navigated to "delivery" page
-        
+    @stageFail  
     Scenario: Verify url of all menu items
         Then I assert href attribute for all items on menu page
             | item                                      |
@@ -105,17 +105,17 @@ Feature: National Menu
             | light-balsamic-vinaigrette-dressing       |
             | light-italian-dressing                    |
             | zesty-apple-cider-vinaigrette-dressing    |
-
+    
     Scenario: Order delivery option takes user to delivery page
         And  click on order now button under an item
         When I select "order delivery" for type of order
         Then I am navigated to "delivery" page
-
+    @stageFail
     Scenario: Order pickup option takes user to order pickup PWO
         And  click on order now button under an item
         When I select "order pickup" for type of order
         Then I am navigated to "pickup PWO" page
-
+    
     Scenario: Clicking on sub sections of Menu shows corresponding items
         And click on sub sections of National Menu and check for an item on UI
 

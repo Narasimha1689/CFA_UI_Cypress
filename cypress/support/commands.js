@@ -285,4 +285,9 @@ Cypress.Commands.add('homeButtonsClickFunc', (buttonsSelector) => {
   cy.get('.flex-wrapper .btn-round')
     .contains(buttonsSelector)
     .click()
-})
+});
+
+Cypress.Commands.add('launchURL', ()=> {
+  let url = Cypress.config().baseUrl;
+  return url
+});

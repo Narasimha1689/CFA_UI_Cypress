@@ -5,7 +5,7 @@ When('Check URL Navigation and Header Text in About S.TruttCathyBrandRestaurants
     dataTable.hashes().forEach(elem => {
     cy.get('.wrapper h1').then($getHeaderText => {
         expect($getHeaderText.text().toLowerCase()).to.equal(elem.headerText)
-    cy.url().should('include', elem.urlNavigation)
+    cy.url().should('include', Cypress.config().baseUrl+elem.urlNavigation)
     });
 
     });

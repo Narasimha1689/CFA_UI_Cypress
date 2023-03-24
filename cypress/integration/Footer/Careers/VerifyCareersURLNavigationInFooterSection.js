@@ -12,7 +12,7 @@ Then('Check Careers URL Navigation in Footer Section', (dataTable) => {
         .contains('Careers')
         .click()
 
-        cy.get('.g-textblock h3').should('contain', 'At Chick-fil-A.')
-        cy.url().should('include',elem.urlNavigation)
+        cy.get('.wrapper h1').should('contain', 'Chick-fil-A')
+        cy.url().should('include',Cypress.config().baseUrl+elem.urlNavigation)
     });
 });

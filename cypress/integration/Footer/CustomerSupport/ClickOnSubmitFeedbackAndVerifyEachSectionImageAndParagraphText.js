@@ -13,7 +13,7 @@ Then('Check Header Text and URL Navigation by clicking on Customer Support link 
       .click()
 
       cy.get('.customer-support-search-header h1').should('contain', elem.headerText)
-      cy.url().should('include',elem.urlNavigation)
+      cy.url().should('include',Cypress.config().baseUrl+elem.urlNavigation)
   });
 });
 
@@ -26,7 +26,7 @@ And('Click on Submit Feedback', ()=> {
 Then('Verify URL validation', (dataTable)=> {
     dataTable.hashes().forEach(elem => {
     cy.get('#lll-content').should('be.visible')
-    cy.url().should('include', elem.urlNavigation)
+    cy.url().should('include', Cypress.config().baseUrl+elem.urlNavigation)
     });
 })
 

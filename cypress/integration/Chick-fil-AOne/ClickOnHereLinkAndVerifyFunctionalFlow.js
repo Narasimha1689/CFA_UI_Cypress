@@ -16,7 +16,7 @@ And('click on Here link and verify functional flow', ()=> {
 Then('Verify the URL Navigations', (dataTable)=> { 
   cy.get('#LocationFrameId h1').should('be.visible')
   dataTable.hashes().forEach(elem => {
-    cy.url().should('contain',elem.urlNavigation)
+    cy.url().should('contain',Cypress.config().baseUrl+elem.urlNavigation)
    });
    cy.get('#LocationFrameId h1').should('contain', 'Customer Support')
 });

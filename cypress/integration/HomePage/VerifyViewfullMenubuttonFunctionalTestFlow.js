@@ -24,7 +24,7 @@ And('Click on View Full Menu button', ()=> {
 Then('Verify the URL Navigation', (dataTable)=> {
     cy.get('.menu-availability-callout h1').should('contain','Chick-fil-A')
     dataTable.hashes().forEach(elem => {
-        cy.url().should('contain', elem.URLNavigation)
+        cy.url().should('contain', Cypress.config().baseUrl+elem.URLNavigation)
     });
 });
 

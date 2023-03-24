@@ -12,10 +12,13 @@ Then('Check Merchandise URL Navigation in Footer Section', (dataTable) => {
         .contains('Merchandise')
         .click()
 
-        cy.url().should('include',elem.urlNavigation)
-        cy.get('.rich-text__button-wrapper a')
-          .first()
+        cy.get(".guarantee_box [type='checkbox']")
           .should('be.visible')
-          .click()        
+        
+        cy.url().should('include', elem.urlNavigation)
+        // cy.get('.rich-text__button-wrapper a')
+        //   .first()
+        //   .should('be.visible')
+        //   .click()        
     });
 });

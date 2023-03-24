@@ -24,7 +24,7 @@ And('Click on Learn about gift Card button', ()=> {
 Then('Verify the Learn about gift Card url displayed', (dataTable)=> {
     cy.get('.wrapper .ewk-egift').should('contain','Purchase an eGift card')
     dataTable.hashes().forEach(elem => {
-        cy.url().should('contain', elem.URLNavigation)
+        cy.url().should('contain', Cypress.config().baseUrl+elem.URLNavigation)
     });
 });
 

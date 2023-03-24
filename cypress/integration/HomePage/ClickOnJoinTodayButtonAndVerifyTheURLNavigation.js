@@ -25,7 +25,7 @@ Then('Click on Join Today button and check the URL NAvigation', (dataTable)=> {
     cy.get('.btn-container').find('a').contains('Get started').should('be.visible')
 
     dataTable.hashes().forEach(elem => {
-        cy.url().should('contain', elem.URLNavigation)
+        cy.url().should('contain', Cypress.config().baseUrl+elem.URLNavigation)
     });
 });
 

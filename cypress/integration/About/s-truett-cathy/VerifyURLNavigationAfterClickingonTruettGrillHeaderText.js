@@ -14,7 +14,7 @@ And('Check Header Text in s-truett-cathy page', () => {
 Then('Check URL navigation after clicking on Truett Grill Header Text in s-truett-cathy page', (dataTable) => {
     dataTable.hashes().forEach((elem, index) => {
         cy.get('.g-round-card__heading').eq(index).contains(elem.HeadersText).click()
-        cy.url().should('contain', elem.navURLs)
+        cy.url().should('contain', Cypress.config().baseUrl+elem.navURLs)
         cy.get('.g-hero__text h1').should('be.visible')
     });
  });

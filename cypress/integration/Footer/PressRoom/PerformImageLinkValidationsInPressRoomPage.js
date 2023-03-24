@@ -13,7 +13,7 @@ Then('Check Header Text and URL Navigation by clicking on Press Room Page', (dat
         .click({force : true})
 
         cy.get('.wrapper h1').should('contain', elem.headerText)
-        cy.url().should('include',elem.urlNavigation)
+        cy.url().should('include',Cypress.config().baseUrl+elem.urlNavigation)
     });
 });
 

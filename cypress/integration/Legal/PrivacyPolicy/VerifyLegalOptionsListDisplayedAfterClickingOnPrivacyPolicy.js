@@ -13,7 +13,7 @@ Then('Check Header Text and URL validation after clicking on  Pricacy Policy lin
           .click()
 
         cy.get('.frame h1').should('contain', elem.headerText)
-        cy.url().should('include',elem.urlNavigation)
+        cy.url().should('include',Cypress.config().baseUrl+elem.urlNavigation)
     });
 });
 

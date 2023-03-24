@@ -5,17 +5,17 @@ And('Verify Footer section is visible or not', ()=> {
       .should('be.visible')
 });
 
-Then('Verify and Check Header Text and URL validation after clicking on Locations Listing link', (dataTable) => {
-    dataTable.hashes().forEach(elem => {
-        cy.get('.footer-nav li')
-          .find('a')
-          .contains('Locations listing')
-          .click()
+// Then('Verify and Check Header Text and URL validation after clicking on Locations Listing link', (dataTable) => {
+//     dataTable.hashes().forEach(elem => {
+//         cy.get('.footer-nav li')
+//           .find('a')
+//           .contains('Locations listing')
+//           .click()
 
-        cy.get('.wrapper h1').should('contain', elem.headerText)
-        cy.url().should('include',elem.urlNavigation)
-    });
-});
+//         cy.get('.wrapper h1').should('contain', elem.headerText)
+//         cy.url().should('include',Cypress.config().baseUrl+elem.urlNavigation)
+//     });
+// });
 
 And('Check the states list displayed in Locations Listing page', (dataTable)=> {
   dataTable.hashes().forEach((elem,index) => {
