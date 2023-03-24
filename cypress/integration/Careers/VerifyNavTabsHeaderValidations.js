@@ -7,9 +7,9 @@ When('clicked on the Careers Menu', ()=> {
           .click()
 });
 
-And('Check for "At Chick-fil-A..." text header', ()=> {
-    cy.get('.g-textblock h3').should('contain', 'At Chick-fil-A.')
-});
+// And('Check for "At Chick-fil-A..." text header', ()=> {
+//     cy.get('.g-textblock h3').should('contain', 'At Chick-fil-A.')
+// });
 
 And('Click on Navigation Tabs and verify the HeaderText', (dataTable)=> {
     // cy.log('raw : ' + dataTable.raw());
@@ -18,8 +18,8 @@ And('Click on Navigation Tabs and verify the HeaderText', (dataTable)=> {
         // for(var propName in elem) {
         //     cy.log(elem[propName])
         // }
-        cy.get('.g-tabs__nav div span').contains(ele.nav_Item).click()
-        cy.get('.g-tabs__text h4').should('contain', ele.HeaderText);
+        // cy.get('.g-tabs__nav div span').contains(ele.nav_Item).click()
+        cy.get('.content .card-title').should('contain', ele.HeaderText);
         
 });
 

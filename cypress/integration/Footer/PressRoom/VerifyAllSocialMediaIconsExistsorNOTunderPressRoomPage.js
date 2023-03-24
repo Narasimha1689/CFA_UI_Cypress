@@ -5,17 +5,17 @@ And('Verify Footer section is visible or not', ()=> {
       .should('be.visible')
 });
 
-Then('Check Header Text and URL Navigation by clicking on Press Room Page', (dataTable) => {
-    dataTable.hashes().forEach(elem => {
-        cy.get('.footer-nav li')
-        .find('a')
-        .contains('Press Room')
-        .click({force : true})
+// Then('Check Header Text and URL Navigation by clicking on Press Room Page', (dataTable) => {
+//     dataTable.hashes().forEach(elem => {
+//         cy.get('.footer-nav li')
+//         .find('a')
+//         .contains('Press Room')
+//         .click({force : true})
 
-        cy.get('.wrapper h1').should('contain', elem.headerText)
-        cy.url().should('include',elem.urlNavigation)
-    });
-});
+//         cy.get('.wrapper h1').should('contain', elem.headerText)
+//         cy.url().should('include',elem.urlNavigation)
+//     });
+// });
 
 And('Check All Social Media Icons Exists or NOT under Press Room Page', (dataTable) => {
     dataTable.hashes().forEach((elem, index) => {

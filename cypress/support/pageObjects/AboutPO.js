@@ -11,7 +11,7 @@ class About_PO {
     }
 
     WhoWeAre_Page(whoWeAre_Title) {
-        cy.get('#truett_intro h1.title').should('have.have.text', whoWeAre_Title)
+        cy.get('#truett_intro h1.title').should('have.text', whoWeAre_Title)
     }
 
     ClickOnReadaboutOurCommitment() {
@@ -31,6 +31,7 @@ class About_PO {
 
     VerifyReservationHomePage() {
         cy.url().should('include', 'Home/Reservation')
+        // cy.url().should('include', 'Home/Reservation')
     }
 
 //     NavigateToAboutSubMenuURL(page) {

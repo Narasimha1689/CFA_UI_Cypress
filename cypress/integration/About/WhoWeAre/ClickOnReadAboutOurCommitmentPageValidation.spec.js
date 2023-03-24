@@ -17,7 +17,7 @@ And('Click on Read about our commitment button', () => {
 
 Then('Verify user navigated to respective page', (dataTable) => {
     dataTable.hashes().forEach(elem => {
-        cy.url().should('contain', elem.navURL)
+        cy.url().should('contain', Cypress.config().baseUrl+elem.navURL)
     });
     about_PO.TextValidation()
 });

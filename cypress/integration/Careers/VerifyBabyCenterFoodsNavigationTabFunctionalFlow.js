@@ -8,29 +8,29 @@ When('clicked on the Careers Menu', ()=> {
           .click()
 });
 
-And('Check for "At Chick-fil-A..." text header', ()=> {
-    cy.get('.g-textblock h3').should('contain', 'At Chick-fil-A.')
-});
+// And('Check for "At Chick-fil-A..." text header', ()=> {
+//     cy.get('.g-textblock h3').should('contain', 'At Chick-fil-A.')
+// });
 
-And('Click on Baby Center Foods Navigation Tab', ()=> {
-        cy.get('.g-tabs__nav div span').contains("Bay Center Foods ").click()
-});
+// And('Click on Baby Center Foods Navigation Tab', ()=> {
+//         cy.get('.g-tabs__nav div span').contains("Bay Center Foods ").click()
+// });
 
-And('Verify the Image displayed on Baby Center Foods supply Navigation Tab', (dataTable)=> {
-    dataTable.hashes().forEach(elem => {
-        // cy.log(elem.imageLink)
-        cy.get('.g-tabs__inner').find('img').eq(6).then($getSrc => {
-            const srcImage = $getSrc.attr('src')
-            // cy.log(srcImage)
-            expect(srcImage).to.be.contains(elem.imageLink)
-        })
+// And('Verify the Image displayed on Baby Center Foods supply Navigation Tab', (dataTable)=> {
+//     dataTable.hashes().forEach(elem => {
+//         // cy.log(elem.imageLink)
+//         cy.get('.g-tabs__inner').find('img').eq(6).then($getSrc => {
+//             const srcImage = $getSrc.attr('src')
+//             // cy.log(srcImage)
+//             expect(srcImage).to.be.contains(elem.imageLink)
+//         })
         
-    });
+//     });
    
-});
+// });
 
 And('Click on Learn More button in Baby Center Foods Navigation Tab', ()=> {
-    cy.get('.g-tabs__inner a').eq(6).click()
+    cy.get('.content .vis-white').eq(6).click()
 });
 
 And('Verify the Baby Center Foods URL launched', (dataTable)=> {

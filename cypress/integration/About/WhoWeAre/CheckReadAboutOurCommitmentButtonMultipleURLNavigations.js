@@ -15,12 +15,12 @@ And('Click on Read about our commitment button', () => {
     about_PO.ClickOnReadaboutOurCommitment()
 });
 
-Then('Verify user navigated to respective page', (dataTable) => {
-    dataTable.hashes().forEach(elem => {
-        cy.url().should('contain', elem.navURL)
-    });
-    about_PO.TextValidation()
-});
+// Then('Verify user navigated to respective page', (dataTable) => {
+//     dataTable.hashes().forEach(elem => {
+//         cy.url().should('contain', elem.navURL)
+//     });
+//     about_PO.TextValidation()
+// });
 
 And('Click on Each link on each section and Verify the URL Launched', (dataTable)=> {
     dataTable.hashes().forEach((elem, index) => {

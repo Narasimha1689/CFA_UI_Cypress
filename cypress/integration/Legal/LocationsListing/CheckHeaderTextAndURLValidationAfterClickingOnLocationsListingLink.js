@@ -13,6 +13,6 @@ Then('Verify and Check Header Text and URL validation after clicking on Location
           .click()
 
         cy.get('.wrapper h1').should('contain', elem.headerText)
-        cy.url().should('include',elem.urlNavigation)
+        cy.url().should('include',Cypress.config().baseUrl+elem.urlNavigation)
     });
 });

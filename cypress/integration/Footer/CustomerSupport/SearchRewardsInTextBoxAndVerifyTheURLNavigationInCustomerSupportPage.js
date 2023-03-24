@@ -5,17 +5,17 @@ And('Verify Footer section is visible or not', ()=> {
       .should('be.visible')
 });
 
-Then('Check Header Text and URL Navigation by clicking on Customer Support link in Footer Section', (dataTable) => {
-    dataTable.hashes().forEach(elem => {
-        cy.get('.footer-nav li')
-        .find('a')
-        .contains('Customer Support')
-        .click()
+// Then('Check Header Text and URL Navigation by clicking on Customer Support link in Footer Section', (dataTable) => {
+//     dataTable.hashes().forEach(elem => {
+//         cy.get('.footer-nav li')
+//         .find('a')
+//         .contains('Customer Support')
+//         .click()
 
-        cy.get('.customer-support-search-header h1').should('contain', elem.headerText)
-        cy.url().should('include',elem.urlNavigation)
-    });
-});
+//         cy.get('.customer-support-search-header h1').should('contain', elem.headerText)
+//         cy.url().should('include',elem.urlNavigation)
+//     });
+// });
 
 And('Search Rewards in Text box field and click on Enter', (dataTable) => {
     dataTable.hashes().forEach(elem => {
@@ -35,7 +35,7 @@ And('Verify the URL navigations', (dataTable) => {
     dataTable.hashes().forEach(elem => {        
         cy.get('.still-have-question__cta a').should('be.visible')
 
-        cy.url().should('contain', elem.rewarsUrlNavigation)
+        cy.url().should('contain', Cypress.config().baseUrl+elem.rewarsUrlNavigation)
     });
 });
 

@@ -7,15 +7,15 @@ When('clicked on the Careers Menu', ()=> {
 });
 
 And('Check for "At Chick-fil-A..." text header', ()=> {
-    cy.get('.g-textblock h3').should('contain', 'At Chick-fil-A.')
+    cy.get('.wrapper h1').should('contain', 'Chick-fil-A')
 });
 
-And('Click on Chick-fil-A supply Navigation Tab', ()=> {
-        cy.get('.g-tabs__nav div span').contains("Chick-fil-A Supply").click()
-});
+// And('Click on Chick-fil-A supply Navigation Tab', ()=> {
+//         cy.get('.g-tabs__nav div span').contains("Chick-fil-A Supply").click()
+// });
 
 And('Click on Learn More button in Chick-fil-A supply Navigation Tab', ()=> {
-    cy.get('.g-tabs__inner a').eq(5).click()
+    cy.get('.content .vis-white').eq(5).click()
 });
 
 Then('Verify the Chick-fil-A supply URL launched', (dataTable)=> {

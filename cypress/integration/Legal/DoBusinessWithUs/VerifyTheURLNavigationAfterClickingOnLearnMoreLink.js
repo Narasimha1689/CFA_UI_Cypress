@@ -20,7 +20,7 @@ And('Click on the Learn More button and Verify the URL Navigation', (dataTable) 
   dataTable.hashes().forEach(elem => {
     cy.get('.dbwu-section p').find('a').first().click()
     cy.get('.wrapper h1').should('contain', elem.headerText)
-    cy.url().should('include', elem.urlNavigation)
+    cy.url().should('include', Cypress.config().baseUrl+elem.urlNavigation)
 
     });
 });

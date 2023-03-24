@@ -42,6 +42,6 @@ Then('Verify the URL displayed', (dataTable)=> {
 Then('Verify the shop ecard url displayed', (dataTable)=> {
     cy.get('.btn-container .ewk-egift').should('contain','Purchase an eGift Card')
     dataTable.hashes().forEach(elem => {
-        cy.url().should('contain', elem.URLNavigation)
+        cy.url().should('contain', Cypress.config().baseUrl+elem.URLNavigation)
     });
 });

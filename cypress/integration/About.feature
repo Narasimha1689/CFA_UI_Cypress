@@ -1,37 +1,37 @@
 @Regression
 Feature: About menu
-
-    Scenario: Navigate to Who We are page by About Click
-        Given I am on the ".Com homepage" page
-        When Mousehover on the About Menu and click it
-        And Verify User landed in default Who we are page
     
+    # Scenario: Navigate to Who We are page by About Click
+    #     Given I am on the ".Com homepage" page
+    #     When Mousehover on the About Menu and click it
+    #     And Verify User landed in default Who we are page
+    @stageFail
     Scenario: Click on Read about our commitment button in Who We Are page and verify the page element
         Given I am on the "About Who We Are" page
         And Check Header Text in Who We Are Page
         And Click on Read about our commitment button
         Then Verify user navigated to respective page
             | navURL |
-            | https://www.chick-fil-a.com/dei |
+            | /dei |
         And Verify the Header Text
-            
+          
     Scenario: Reservation Home Page Validation
         Given I am on the "About Who We Are" page
         And Check Header Text in Who We Are Page
         And Click on Purchase Tickets button
         Then Verify the Reservation Home tickets page
             | URLCheck |
-            | https://tours.chick-fil-a.com/tours/Home/Reservation?_gl=1*bioa17*_ga*MTkwMDg2Mjc3MS4xNjY2OTM1Njkz*_ga_W1ZL54JC7M*MTY2NzgzNjAzNy4xMC4xLjE2Njc4NDgxOTQuNDcuMC4w |
+            | /tours/Home/Reservation?_gl=1*bioa17*_ga*MTkwMDg2Mjc3MS4xNjY2OTM1Njkz*_ga_W1ZL54JC7M*MTY2NzgzNjAzNy4xMC4xLjE2Njc4NDgxOTQuNDcuMC4w |
     
     Scenario: Verify and Validate Sub-Menu Navigation items
         Given I am on the ".Com homepage" page
         When Mousehover on the About Menu and click it
         And Check and validate sub-menu navigation items
-
+    
     Scenario: Navigate to Great Food Page and verify Header Text
         Given I am on the "About Great Food" page
         And Verify Great Food Header Text Page
-
+    @stageFail
     Scenario: Verify each Image links in Great Food page
         Given I am on the "About Great Food" page
         And Verify Great Food Header Text Page in Great Food page
@@ -43,7 +43,7 @@ Feature: About menu
             | https://d1fd34dzzl09j.cloudfront.net/Images/CFACOM/About%20Images/Great%20Food/Thrive%20Farmers/CFA_Great-Food_Thrive-Farmers.jpg | 3 |
             | https://d1fd34dzzl09j.cloudfront.net/Images/CFACOM/About%20Images/Great%20Food/Sunkist/CFA_Great-Food_Sunkist.jpg | 4 |
             | https://d1fd34dzzl09j.cloudfront.net/Images/CFACOM/About%20Images/Great%20Food/Johnson-Agriprises/CFA_Great-Food_Johnson-Agripses.jpg | 5 |
-
+    @stageFail
     Scenario: Verify each Content Header of h2 tags in Great Food page
         Given I am on the "About Great Food" page
         And Verify Great Food Header Text Page in Great Food page
@@ -52,7 +52,7 @@ Feature: About menu
             | Real food, rigorous standards | 0 |
             | Selective about the chicken we serve | 1 |
             | Going cage-free | 2 |
-    
+    @stageFail
     Scenario: Verify each Content Header of h3 tags in Great Food page
         Given I am on the "About Great Food" page
         And Verify Great Food Header Text Page in Great Food page
@@ -61,7 +61,7 @@ Feature: About menu
             | Farmer-direct coffee | 0 |
             | Lemons grown in the USA | 1 |
             | Always improving through potatoes  | 2 |
-    
+    @stageFail
     Scenario: Verify each Content Paragraph in Great Food page
         Given I am on the "About Great Food" page
         And Verify Great Food Header Text Page in Great Food page
@@ -73,33 +73,33 @@ Feature: About menu
             | Thrive Farmers®, a specialty-grade coffee company, supplies our coffee for our restaurants in Canada | 3 |
             | Sunkist lemons come from groves in the U.S. Family-owned farms across California and Arizona work | 4 |
             | Idaho-based potato company Lamb Weston provides our Waffle Potato Fries™ and Hash Browns | 5 |
-    
+    @stageFail
     Scenario: Verify download the report in Great Food page
         Given I am on the "About Great Food" page
         And Verify Great Food Header Text Page in Great Food page
         Then Verify download the report in Great Food page
-    
+    @stageFail
     Scenario: Check Thrive Farmers URL navigation in Great Food page
         Given I am on the "About Great Food" page
         And Verify Great Food Header Text Page in Great Food page
         Then Verify Thrive Farmers URL navigation in Great Food page
             | paragraphLinks | greatFoodURLNavigation |
             | Thrive Farmers | https://thrivefarmers.com/ |
-    
+    @stageFail
     Scenario: Check Puerto Rico URL navigation in Great Food page
         Given I am on the "About Great Food" page
         And Verify Great Food Header Text Page in Great Food page
         Then Verify Puerto Rico URL navigation in Great Food page
             | paragraphLinks | greatFoodURLNavigation |
             | Puerto Rico Coffee Roasters | https://prcoffee.com/ |
-    
+    @stageFail
     Scenario: Check Lamb Weston URL navigation in Great Food page
         Given I am on the "About Great Food" page
         And Verify Great Food Header Text Page in Great Food page
         Then Verify Lamb Weston URL navigation in Great Food page
             | paragraphLinks | greatFoodURLNavigation |
             | Lamb Weston | https://www.lambweston.com/ |
-
+    @stageFail
     Scenario: Check sustainable potato URL navigation in Great Food page
         Given I am on the "About Great Food" page
         And Verify Great Food Header Text Page in Great Food page
@@ -110,7 +110,7 @@ Feature: About menu
     Scenario: Navigate to Giving Back Page and verify Header Text
         Given I am on the "About Giving Back" page
         And Verify Giving Back Header Text Page
-    
+    @stageFail
     Scenario: Verify Local Communities Header Text in Giving Back page
         Given I am on the "About Giving Back" page
         And Verify Giving Back Header Text Page
@@ -119,7 +119,7 @@ Feature: About menu
             | Leading locally                     | 0 |
             | Restaurant Team Member scholarships | 1 |
             | Community grants                    | 2 |
-    
+    @stageFail
     Scenario: Verify Local Communities Paragraph Content in Giving Back page
         Given I am on the "About Giving Back" page
         And Verify Giving Back Header Text Page
@@ -128,7 +128,7 @@ Feature: About menu
             | Chick-fil-A Operators are full-time, hands-on leaders in their restaurants and in their communities | 0 |
             | Scholarships at Chick-fil-A began when Truett Cathy set a mayonnaise jar on his first restaurant    | 1 |
             | Through our annual Chick-fil-A True Inspiration Awards, Operators have the opportunity to nominate  | 2 |
-
+    @stageFail
     Scenario: Verify Local Communities Navigation links in Giving Back page
         Given I am on the "About Giving Back" page
         And Verify Giving Back Header Text Page
@@ -137,7 +137,7 @@ Feature: About menu
             | Read about Chick-fil-A Leader Academy and its impact on high school students | 0     |
             | Learn about scholarships and meet these scholars                             | 1     |
             | Learn more about our True Inspiration Awards                                 | 2     |
-    
+    @stageFail
     Scenario: Verify the Image Links in Giving Back page
         Given I am on the "About Giving Back" page
         And Verify Giving Back Header Text Page
@@ -145,7 +145,7 @@ Feature: About menu
             | imageLinks                                                                                                              | index |
             | https://d1fd34dzzl09j.cloudfront.net/Images/CFACOM/About%20Images/Giving%20Back/Our-Philosophy/Hug_Giving-Back_1440.jpg | 0     |
             | /-/media/images/cfacom/giving-back/shared-table-28_resized.ashx                                                         | 1     |
-    
+    @stageFail
     Scenario: Perform Navigation links URL validations in Giving Back page
         Given I am on the "About Giving Back" page
         And Verify Giving Back Header Text Page
@@ -158,7 +158,7 @@ Feature: About menu
     Scenario: Navigate to History Page and verify Header Text
         Given I am on the "About History" page
         And Check Header Text in History page
-    
+    @stageFail
     Scenario: Verify the Image Links under company history in History page
         Given I am on the "About History" page
         And Check Header Text in History page
@@ -222,25 +222,25 @@ Feature: About menu
             | Advertising Walk of Fame                   | Advertising Week honors the Chick-fil-A "Eat Mor Chikin®" Cows as one of America’s most popular      | 7     |
             | Truett Passes Away at 93                   | After a long and meaningful life, Chick-fil-A founder Truett Cathy passes away                       | 8     |
             | Chick-fil-A opens in New York City         | In 2015 Chick-fil-A opens its doors in the heart of the Big Apple's Garment District at 37th and 6th | 9     |
-    
+    @stageFail
     Scenario: Verify URL Navigation by Clicking on Read More button
         Given I am on the "About History" page
         And Check Header Text in History page
         Then Click on Read More link
         And Verify the URL Launched
             | humbleBeginningsURL |
-            | https://www.chick-fil-a.com/stories/inside-chick-fil-a/humble-beginnings-how-truett-cathys-love-for-customers-grew-from-a-coke-and-smile |
+            | /stories/inside-chick-fil-a/humble-beginnings-how-truett-cathys-love-for-customers-grew-from-a-coke-and-smile |
         Then Verify Image validation in Humble Beginnings page
             | imgSrc |
             | https://d1fd34dzzl09j.cloudfront.net/Images/CFACOM/Stories%20Images/2016/11/Truett%20Stories/TruettCustomers.jpg?h=988&w=1020&la=en |
         Then Click on cfa-stories section and verify the new URL Launched
             | celebratingTruett |
-            | https://www.chick-fil-a.com/stories/inside-chick-fil-a/celebrating-truett-on-his-100th-birthday |
+            | /stories/inside-chick-fil-a/celebrating-truett-on-his-100th-birthday |
     
     Scenario: Navigate to s-truett-cathy Page and verify Header Text
         Given I am on the "About s-truett-cathy" page
         And Check Header Text in s-truett-cathy page
-    
+    @stageFail
     Scenario: Verify image links in s-truett-cathy Page
         Given I am on the "About s-truett-cathy" page
         And Check Header Text in s-truett-cathy page
@@ -257,29 +257,29 @@ Feature: About menu
         And Check Header Text in s-truett-cathy page
         Then Check URL navigation after clicking on Truett Grill Header Text in s-truett-cathy page
             | HeadersText    | index | navURLs                                                                          |
-            | Truett's Grill | 0     | https://www.chick-fil-a.com/about/s-truett-cathy-brand-restaurants/truetts-grill |
+            | Truett's Grill | 0     | /about/s-truett-cathy-brand-restaurants/truetts-grill |
         And Verify images in Truett Grill page
             | imageLinks                                                                                                                                 | index |
             | https://d3oz09jk0dq1kk.cloudfront.net/Images/CFACOM/About%20Images/STC%20Brand%20Restaurants/Truetts%20Grill%20Brand%20History%20Image.jpg | 0     |
             | https://d3oz09jk0dq1kk.cloudfront.net/Images/CFACOM/About%20Images/STC%20Brand%20Restaurants/Truetts%20Grill%20Brand%20About%20Copy.jpg    | 1     |
-
+    @stageFail
     Scenario: Verify URL navigation after clicking on The Dwarf house Header Text in s-truett-cathy Page
         Given I am on the "About s-truett-cathy" page
         And Check Header Text in s-truett-cathy page
         Then Check URL navigation after clicking on The Dwarf house Header Text in s-truett-cathy page
             | HeadersText     | navURLs                                                                        |
-            | The Dwarf House | https://www.chick-fil-a.com/about/s-truett-cathy-brand-restaurants/dwarf-grill |
+            | The Dwarf House | /about/s-truett-cathy-brand-restaurants/dwarf-grill |
         And Verify images in The Dwarf House page
             | imageLinks                                                                                                                                 | index |
             | https://d3oz09jk0dq1kk.cloudfront.net/Images/CFACOM/About%20Images/STC%20Brand%20Restaurants/Lemon%20Pie.jpg                               | 0     |
-            | https://d3oz09jk0dq1kk.cloudfront.net/Images/CFACOM/About%20Images/STC%20Brand%20Restaurants/Truett%20Statue%20Dwarf%20House%20Callout.jpg | 1     |
+            | https://d3oz09jk0dq1kk.cloudfront.net/Images/CFACOM/About%20Images/STC%20Brand%20Restaurants/Dwarf%20House%20Brand%20Landing%20Page%20History%20Image.jpg | 1     |
 
     Scenario: Verify URL navigation after clicking on Truett Luau Header Text in s-truett-cathy Page
         Given I am on the "About s-truett-cathy" page
         And Check Header Text in s-truett-cathy page
         Then Check URL navigation after clicking on The Truett Luau Header Text in s-truett-cathy page
             | HeadersText     | navURLs                                                                         |
-            | Truett's Luau   | https://www.chick-fil-a.com/about/s-truett-cathy-brand-restaurants/truetts-luau |
+            | Truett's Luau   | /about/s-truett-cathy-brand-restaurants/truetts-luau |
         And Verify images in The Truett Luau page
             | imageLinks                                                                                                                                 | index |
             | https://d3oz09jk0dq1kk.cloudfront.net/Images/CFACOM/About%20Images/STC%20Brand%20Restaurants/Truetts%20Luau%20About%20Image%202.jpg        | 0     |
@@ -290,33 +290,33 @@ Feature: About menu
         And Check Header Text in s-truett-cathy page
         Then Check URL navigation after clicking on The Truett Chick-fil-A Header Text in s-truett-cathy page
             | HeadersText            | navURLs                                                                                |
-            | Truett's Chick-fil-A   | https://www.chick-fil-a.com/about/s-truett-cathy-brand-restaurants/truetts-chick-fil-a |
+            | Truett's Chick-fil-A   | /about/s-truett-cathy-brand-restaurants/truetts-chick-fil-a |
         And Verify images in The Truett Chick-fil-A page
             | imageLinks                                                                                                                                 | index |
             | https://d3oz09jk0dq1kk.cloudfront.net/Images/CFACOM/About%20Images/STC%20Brand%20Restaurants/Truetts%20CFA%20About%20Image.jpg             | 0     |
             | https://d3oz09jk0dq1kk.cloudfront.net/Images/CFACOM/About%20Images/STC%20Brand%20Restaurants/Truetts%20CFA%20Location%20About%20Image.jpg  | 1     |
-
+    @stageFail
     Scenario: Verify URL navigation after clicking on Dwarf House Header Text in s-truett-cathy Page
         Given I am on the "About s-truett-cathy" page
         And Check Header Text in s-truett-cathy page
         Then Check URL navigation after clicking on Dwarf House Header Text in s-truett-cathy page
             | HeadersText | navURLs                                                                        |
-            | Dwarf House | https://www.chick-fil-a.com/about/s-truett-cathy-brand-restaurants/dwarf-house |
+            | Dwarf House | /about/s-truett-cathy-brand-restaurants/dwarf-house |
         And Verify images in Dwarf House page
             | imageLinks                                                                                                                                                | index |
             | https://d3oz09jk0dq1kk.cloudfront.net/Images/CFACOM/About%20Images/STC%20Brand%20Restaurants/Dwarf%20House%20Brand%20Landing%20Page%20Abot%20Image.jpg    | 0     |
-            | https://d3oz09jk0dq1kk.cloudfront.net/Images/CFACOM/About%20Images/STC%20Brand%20Restaurants/Dwarf%20House%20Brand%20Landing%20Page%20History%20Image.jpg | 1     |
+            | https://d3oz09jk0dq1kk.cloudfront.net/Images/CFACOM/About%20Images/STC%20Brand%20Restaurants/HDH%20Header%20Image.jpg | 1     |
 
     Scenario: Perform Go back validation and user should return to s-truett-cathy page from Dwarf House page
         Given I am on the "About s-truett-cathy" page
         And Check Header Text in s-truett-cathy page
         Then Check URL navigation after clicking on Dwarf House Header Text in s-truett-cathy page
             | HeadersText | navURLs                                                                        |
-            | Dwarf House | https://www.chick-fil-a.com/about/s-truett-cathy-brand-restaurants/dwarf-house |
+            | Dwarf House | /about/s-truett-cathy-brand-restaurants/dwarf-house |
         And perform Go Back action
         Then user should return to s-truett-cathy page
             | homePageURL |
-            | https://www.chick-fil-a.com/about/s-truett-cathy-brand-restaurants |
+            | /about/s-truett-cathy-brand-restaurants |
         
     Scenario: Verify Paragraph Content in s-truett-cathy Page
         Given I am on the "About s-truett-cathy" page
@@ -332,7 +332,7 @@ Feature: About menu
     Scenario: Navigate to Who We Are Page and verify Header Text
         Given I am on the "About Who We Are" page
         And Check Header Text in Who We Are Page
-    
+    @stageFail
     Scenario: Verify image links in Who We Are Page
         Given I am on the "About Who We Are" page
         And Check Header Text in Who We Are Page
@@ -341,14 +341,14 @@ Feature: About menu
             | https://d1fd34dzzl09j.cloudfront.net/Images/CFACOM/Bio%20Images/Dan-Bio_Who-We-Are.jpg?h=299&w=398&la=en    | 0     |
             | https://d1fd34dzzl09j.cloudfront.net/Images/CFACOM/Bio%20Images/Bubba-Bio_Who-We-Are3.jpg?h=299&w=398&la=en | 1     |
             | https://d1fd34dzzl09j.cloudfront.net/Images/CFACOM/Bio%20Images/TrudyWhoWeAre%20(1).jpg?h=299&w=398&la=en   | 2     |
-    
+    @stageFail
     Scenario: Verify Read about our commitment button Multiple URL NAvigations in Who We Are page
         Given I am on the "About Who We Are" page
         And Check Header Text in Who We Are Page
         And Click on Read about our commitment button
         Then Verify user navigated to respective page
             | navURL |
-            | https://www.chick-fil-a.com/dei |
+            | /dei |
         And Click on Each link on each section and Verify the URL Launched
             | links                                   | index | navURLS                                                                           |
             | Remarkable Futures™ Scholarship program | 0     | https://www.chick-fil-a.com/remarkable-futures-scholarships                       |

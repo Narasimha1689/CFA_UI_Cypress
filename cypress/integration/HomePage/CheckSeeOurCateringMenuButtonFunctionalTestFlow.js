@@ -28,7 +28,7 @@ And('Click on View Our Catering Menu button', ()=> {
 Then('Verify the URL NAvigation', (dataTable)=> {
     cy.get('.menu-hero-text  a').should('be.visible')
     dataTable.hashes().forEach(elem => {
-        cy.url().should('contain', elem.URLNavigation)
+        cy.url().should('contain', Cypress.config().baseUrl+elem.URLNavigation)
     });
 });
 

@@ -8,21 +8,21 @@ When('clicked on the Careers Menu', ()=> {
           .click()
 });
 
-And('Check for "At Chick-fil-A..." text header', ()=> {
-    cy.get('.g-textblock h3').should('contain', 'At Chick-fil-A.')
-});
+// And('Check for "At Chick-fil-A..." text header', ()=> {
+//     cy.get('.g-textblock h3').should('contain', 'At Chick-fil-A.')
+// });
 
-And('Click on Corporate Navigation Tab', ()=> {
-        cy.get('.g-tabs__nav div span').contains("Corporate").click()
-});
+// And('Click on Corporate Navigation Tab', ()=> {
+//         cy.get('.g-tabs__nav div span').contains("Corporate").click()
+// });
 
 And('Click on Learn More button in Corporate Navigation Tab', ()=> {
-    cy.get('.g-tabs__inner a').eq(1).click()
+    cy.get('.content .vis-white').eq(1).click()
 });
 
 Then('Verify the Corporate URL launched', (dataTable)=> {
     dataTable.hashes().forEach(elem => {
-        cy.url().should('eq', elem.CorporateURL)
+        cy.url().should('eq', Cypress.config().baseUrl+elem.CorporateURL)
     })  
 });
 

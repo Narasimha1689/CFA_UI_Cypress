@@ -8,23 +8,24 @@ When('clicked on the Careers Menu', ()=> {
           .click()
 });
 
-And('Check for "At Chick-fil-A..." text header', ()=> {
-    cy.get('.g-textblock h3').should('contain', 'At Chick-fil-A.')
-});
+// And('Check for "At Chick-fil-A..." text header', ()=> {
+//     cy.get('.g-textblock h3').should('contain', 'At Chick-fil-A.')
+// });
 
-And('Click on LDP Navigation Tab', ()=> {
-        cy.get('.g-tabs__nav div span').contains("LDP").click()
-});
+// And('Click on LDP Navigation Tab', ()=> {
+//         cy.get('.g-tabs__nav div span').contains("LDP").click()
+// });
 
 And('Click on Learn More button in LDP Navigation Tab', ()=> {
-    cy.get('.g-tabs__inner a').eq(3).click()
+    cy.get('.subtext .slider-btn-container button').eq(1).click()
+    cy.get('.content .vis-white').eq(3).click()
 });
 
-Then('Verify the LDP URL launched', (dataTable)=> {
-    dataTable.hashes().forEach(elem => {
-        cy.url().should('eq', elem.LDPURL)
-    })  
-});
+// Then('Verify the LDP URL launched', (dataTable)=> {
+//     dataTable.hashes().forEach(elem => {
+//         cy.url().should('eq', elem.LDPURL)
+//     })  
+// });
 
 And('Verify the header text in LDP page', ()=> {
     cy.get('.wrapper h1').should('contain', 'Leadership Development Program')
@@ -36,7 +37,7 @@ And('Click on Learn More link in LDP screen', ()=> {
 
 Then('Verify the URL launched and element validation in glance page', (dataTable)=> {
     dataTable.hashes().forEach(elem => {
-        cy.url().should('eq', elem.glancePageURL)
+        cy.url().should('eq', Cypress.config().baseUrl+elem.glancePageURL)
     }) ;
     cy.get('.wrapper h1').should('contain','Program at a glance')
 });

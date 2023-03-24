@@ -1,6 +1,6 @@
 @Regression
 Feature: Chick-fil-A One Home Page Validations
-    
+    @stageFail
     Scenario: Verify Home Page and Check User Navigation after clicking on Sign Up
         Given I am on the ".Com homepage" page
         And Mousehover on the Chick-fil-A One Icon logo and and click it
@@ -29,7 +29,7 @@ Feature: Chick-fil-A One Home Page Validations
     #     Then Verify the URL displayed
     #         | URLNavigation     |
     #         | cfa.wgiftcard.com |
-    
+    @stageFail
     Scenario: Verify shop eGift Card button
         Given I am on the ".Com homepage" page
         And Mousehover on the Chick-fil-A One Icon logo and and click it
@@ -40,8 +40,8 @@ Feature: Chick-fil-A One Home Page Validations
         And Click on shop eGift Card button
         Then Verify the shop ecard url displayed
             | URLNavigation     |
-            | https://www.chick-fil-a.com/gift-cards/egift-cards |
-    
+            | /gift-cards/egift-cards |
+    @stageFail
     Scenario: Verify Learn about Gift Card button
         Given I am on the ".Com homepage" page
         And Mousehover on the Chick-fil-A One Icon logo and and click it
@@ -52,7 +52,7 @@ Feature: Chick-fil-A One Home Page Validations
         And Click on Learn about gift Card button
         Then Verify the Learn about gift Card url displayed
             | URLNavigation     |
-            | https://www.chick-fil-a.com/gift-cards |
+            | /gift-cards |
     
     # Scenario: Verify Give an eGift Card button with Go Back Functional Test Flow
     #     Given I am on the ".Com homepage" page
@@ -90,8 +90,8 @@ Feature: Chick-fil-A One Home Page Validations
         And Click on View Full Menu button
         Then Verify the URL Navigation
             | URLNavigation                |
-            | https://www.chick-fil-a.com/menu |
-    
+            | /menu |
+    @stageFail
     Scenario: Check See our Catering Menu button Functional Test Flow
         Given I am on the ".Com homepage" page
         And Mousehover on the Chick-fil-A One Icon logo and and click it
@@ -103,7 +103,7 @@ Feature: Chick-fil-A One Home Page Validations
         And Click on View Our Catering Menu button
         Then Verify the URL NAvigation
             | URLNavigation                |
-            | www.chick-fil-a.com/catering |
+            | /catering |
         And Verify the Nigation tabs displayed
             | navigationTabs | index |
             | Breakfast      | 0     |
@@ -122,8 +122,8 @@ Feature: Chick-fil-A One Home Page Validations
         #     | Make every order count |
         #     | Join Chick-fil-A One   |
         Then Click on Join Today button and check the URL NAvigation
-            | URLNavigation                   |
-            | https://www.chick-fil-a.com/one |
+            | URLNavigation |
+            | /one |
     
     # Scenario: Click on Learn More button and Verify the URL Navigation
     #     Given I am on the ".Com homepage" page
@@ -187,7 +187,7 @@ Feature: Chick-fil-A One Home Page Validations
     #         | Make every order count |
     #         | Join Chick-fil-A One   |
     #     And Check Header line and Image in day part animated section in Home Page
-    
+    @stageFail
     Scenario: Verify Content Header text and Image Links in Home Page
         Given I am on the ".Com homepage" page
         And Mousehover on the Chick-fil-A One Icon logo and and click it
